@@ -3,7 +3,12 @@ import React from 'react'
 const FirstNav = () => {
   return (
     <div id="first-nav">
-      <h1>First Nav</h1>
+      <div id="icon-holder">
+        <img id="avatar" className="sidebar-icon"></img>
+        <img id="home-icon" className="sidebar-icon"></img>
+        <img id="search-icon" className="sidebar-icon"></img>
+        <img id="settings-icon" className="sidebar-icon"></img>
+      </div>
     </div>
   )
 }
