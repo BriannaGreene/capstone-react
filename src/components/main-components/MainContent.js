@@ -1,30 +1,26 @@
 import React from 'react'
-import DashboardTime from '../sub-components/DashboardTime'
-import DashboardNotes from '../sub-components/DashboardNotes'
-import DashboardContacts from '../sub-components/DashboardContacts'
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import Dashboard from '../sub-components/dashboard/Dashboard'
+import Tasks from '../sub-components/tasks/Tasks'
+import Sprint from '../sub-components/sprint/Sprint'
+import Backlog from '../sub-components/backlog/Backlog'
+import Team from '../sub-components/team/Team'
+import Messages from '../sub-components/messages/Messages'
 
 const MainContent = () => {
   return (
     <div id="main-content">
-      <div id="main-header">
-        <div id="main-header-left">
-          <h2 id="main-heading">Hello, Bri!</h2>
-          <span>Team Name - Group Name</span>
+      <BrowserRouter>
+        <div className="div">
+          <Route exact path="/home" component={Dashboard} />
+          <Route exact path="/home/tasks" component={Tasks} />
+          <Route exact path="/home/sprint" component={Sprint} />
+          <Route exact path="/home/backlog" component={Backlog} />
+          <Route exact path="/home/team" component={Team} />
+          <Route exact path="/home/messages" component={Messages} />
         </div>
-      </div>
-      <div id="main-body">
-        <div id="main-body-top">
-          <div id="top-left">
-            <DashboardTime />
-          </div>
-          <div>
-            <DashboardNotes />
-          </div>
-        </div>
-        <div>
-          <DashboardContacts />
-        </div>
-      </div>
+      </BrowserRouter>
     </div>
   )
 }

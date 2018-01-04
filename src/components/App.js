@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import FirstNav from './main-components/FirstNav'
-import SecondNav from './main-components/SecondNav'
-import MainContent from './main-components/MainContent'
+import Landing from './Landing'
+import Home from './Home'
 
 const API = `${process.env.API}`
 
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <FirstNav />
-        <SecondNav />
-        <MainContent />
+      <div className="div">
+        <BrowserRouter>
+          <div className="div">
+            <Route exact path="/" component={Landing} />
+            <Route path="/home" component={Home} />
+          </div>
+        </BrowserRouter>
       </div>
     )
   }
