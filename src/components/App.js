@@ -7,6 +7,19 @@ import Home from './Home'
 const API = `${process.env.API}`
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      tickets: []
+    }
+  }
+
+  async componentDidMount() {
+    const tickets = await fetch(`${API}/tickets.json`)
+    console.log(tickets);
+  }
+
   render() {
     return (
       <div className="div">

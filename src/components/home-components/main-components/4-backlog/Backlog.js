@@ -3,16 +3,11 @@ import React from 'react'
 const Backlog = () => {
   return (
     <div className="main-body">
-      <div className="main-body-top">
-        <div className="top-left">
-          something
-        </div>
-        <div>
-          something
-        </div>
+      <div>
+        Backlog of tasks
       </div>
       <div>
-        something
+        display each task
       </div>
     </div>
   )

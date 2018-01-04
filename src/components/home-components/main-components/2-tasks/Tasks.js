@@ -4,15 +4,21 @@ const Tasks = () => {
   return (
     <div className="main-body">
       <div className="main-body-top">
-        <div className="top-left">
-          something
+        <div>
+          Your Tasks title
         </div>
         <div>
-          something
+          sub nav of tasks
+        </div>
+        <div>
+          inprogress header
+        </div>
+        <div>
+          inprogress list
         </div>
       </div>
       <div>
-        something
+        to do tasks list title
       </div>
     </div>
   )

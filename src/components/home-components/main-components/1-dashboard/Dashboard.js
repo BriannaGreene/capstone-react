@@ -8,11 +8,13 @@ const Dashboard = () => {
 
     <div className="main-body">
       <div className="main-body-top">
-        <div className="top-left">
-          <DashboardTime />
-        </div>
-        <div>
-          <DashboardNotes />
+        <div className="top-split">
+          <div className="top-left">
+            <DashboardTime />
+          </div>
+          <div>
+            <DashboardNotes />
+          </div>
         </div>
       </div>
       <div>
