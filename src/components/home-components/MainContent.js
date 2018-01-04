@@ -1,16 +1,20 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import Dashboard from './main-components/dashboard/Dashboard'
-import Tasks from './main-components/tasks/Tasks'
-import Sprint from './main-components/sprint/Sprint'
-import Backlog from './main-components/backlog/Backlog'
-import Team from './main-components/team/Team'
-import Messages from './main-components/messages/Messages'
+import Header from './Header'
+import Dashboard from './main-components/1-dashboard/Dashboard'
+import Tasks from './main-components/2-tasks/Tasks'
+import Sprint from './main-components/3-sprint/Sprint'
+import Backlog from './main-components/4-backlog/Backlog'
+import Team from './main-components/5-team/Team'
+import Messages from './main-components/6-messages/Messages'
 
 const MainContent = () => {
   return (
-    <div id="main-content">      
+    <div id="main-content">
+      <div className="main-header">
+        <Header />
+      </div>
       <BrowserRouter>
         <div className="div">
           <Route exact path="/home" component={Dashboard} />
