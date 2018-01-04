@@ -1,7 +1,7 @@
 import React from 'react'
-import FirstNav from './main-components/FirstNav'
-import SecondNav from './main-components/SecondNav'
-import MainContent from './main-components/MainContent'
+import FirstNav from './home-components/FirstNav'
+import SecondNav from './home-components/SecondNav'
+import MainContent from './home-components/MainContent'
 
 const Dashboard = () => {
   return (
