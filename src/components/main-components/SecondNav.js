@@ -7,7 +7,7 @@ const SecondNav = () => {
 
         <div className="nav-item-box">
           <div>
-            <img id="project-avatar" className="nav-icon"></img>
+            <img id="project-avatar" className="nav-icon" alt="icon"></img>
           </div>
           <div id="nav-header-text">
             <h2 id="project-teamname">Team Name</h2>
@@ -17,7 +17,7 @@ const SecondNav = () => {
 
         <div className="nav-item-box">
           <div>
-            <img className="nav-icon"></img>
+            <img className="nav-icon" alt="icon"></img>
           </div>
           <div className="nav-text-box">
             <span className="nav-link">My Dashboard</span>
@@ -25,7 +25,7 @@ const SecondNav = () => {
         </div>
         <div className="nav-item-box">
           <div>
-            <img className="nav-icon"></img>
+            <img className="nav-icon" alt="icon"></img>
           </div>
           <div className="nav-text-box">
             <span className="nav-link">Current Tasks</span>
@@ -33,7 +33,7 @@ const SecondNav = () => {
         </div>
         <div className="nav-item-box">
           <div>
-            <img className="nav-icon"></img>
+            <img className="nav-icon" alt="icon"></img>
           </div>
           <div className="nav-text-box">
             <span className="nav-link">Sprint Overview</span>
@@ -41,7 +41,7 @@ const SecondNav = () => {
         </div>
         <div className="nav-item-box">
           <div>
-            <img className="nav-icon"></img>
+            <img className="nav-icon" alt="icon"></img>
           </div>
           <div className="nav-text-box">
             <span className="nav-link">Task Backlog</span>
@@ -49,7 +49,7 @@ const SecondNav = () => {
         </div>
         <div className="nav-item-box">
           <div>
-            <img className="nav-icon"></img>
+            <img className="nav-icon" alt="icon"></img>
           </div>
           <div className="nav-text-box">
             <span className="nav-link">Team Members</span>
@@ -57,7 +57,7 @@ const SecondNav = () => {
         </div>
         <div className="nav-item-box">
           <div>
-            <img className="nav-icon"></img>
+            <img className="nav-icon" alt="icon"></img>
           </div>
           <div className="nav-text-box">
             <span className="nav-link">Messages</span>

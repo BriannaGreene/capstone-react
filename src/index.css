@@ -41,8 +41,8 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 }
 
 .nav-icon {
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   border: black solid 1px;
 }
 
@@ -87,10 +87,24 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 
 #main-heading {
   margin: 0;
-  
+
 }
 
 #main-body {
   border: solid 1px black;
   height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-body-top {
+  border: solid 1px black;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+#top-left {
+  border: solid 1px black;
+  width: 50%;
 }
