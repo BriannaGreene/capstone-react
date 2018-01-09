@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import Header from './Header'
 import Dashboard from './main-components/1-dashboard/Dashboard'
@@ -15,16 +15,16 @@ const MainContent = () => {
       <div className="main-header">
         <Header />
       </div>
-      <BrowserRouter>
-        <div className="div">
+      <div className="div">
+        <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/tasks" component={Tasks} />
           <Route exact path="/sprint" component={Sprint} />
           <Route exact path="/backlog" component={Backlog} />
           <Route exact path="/team" component={Team} />
           <Route exact path="/messages" component={Messages} />
-        </div>
-      </BrowserRouter>
+        </Switch>
+      </div>
     </div>
   )
 }

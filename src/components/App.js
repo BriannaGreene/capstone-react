@@ -48,7 +48,6 @@ class App extends Component {
               <Route exact path="/" component={Landing} /> :
               <Route path="/" component={Home} />
             }
-
           </div>
         </BrowserRouter>
       </div>

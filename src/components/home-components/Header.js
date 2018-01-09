@@ -1,10 +1,24 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import Header01 from './main-components/0-header/Header01'
+import Header02 from './main-components/0-header/Header02'
+import Header03 from './main-components/0-header/Header03'
+import Header04 from './main-components/0-header/Header04'
+import Header05 from './main-components/0-header/Header05'
+import Header06 from './main-components/0-header/Header06'
+
 
 const Header = () => {
   return (
-    <div className="main-header-left">
-      <h2 className="main-heading">Hello, Bri!</h2>
-      <span>Team Name - Group Name</span>
+    <div className="div">
+      <Switch>
+        <Route exact path="/" component={Header01} />
+        <Route exact path="/tasks" component={Header02} />
+        <Route exact path="/sprint" component={Header03} />
+        <Route exact path="/backlog" component={Header04} />
+        <Route exact path="/team" component={Header05} />
+        <Route exact path="/messages" component={Header06} />
+      </Switch>
     </div>
   )
 }
