@@ -27,14 +27,28 @@ class App extends Component {
     // this.dispatch({type: 'FETCH_USER'})
   }
 
+  // renderContent() {
+  //   switch (this.props.auth) {
+  //     case null:
+  //
+  //     case false:
+  //
+  //     default:
+  //
+  //   }
+  // }
+
   render() {
     console.log('props from app render', this.props);
     return (
       <div className="div">
         <BrowserRouter>
           <div className="div">
-            <Route exact path="/" component={Landing} />
-            <Route path="/home" component={Home} />
+            { this.props.auth === false || this.props.auth === null ?
+              <Route exact path="/" component={Landing} /> :
+              <Route path="/" component={Home} />
+            }
+
           </div>
         </BrowserRouter>
       </div>

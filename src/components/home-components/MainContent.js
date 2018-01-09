@@ -17,12 +17,12 @@ const MainContent = () => {
       </div>
       <BrowserRouter>
         <div className="div">
-          <Route exact path="/home" component={Dashboard} />
-          <Route exact path="/home/tasks" component={Tasks} />
-          <Route exact path="/home/sprint" component={Sprint} />
-          <Route exact path="/home/backlog" component={Backlog} />
-          <Route exact path="/home/team" component={Team} />
-          <Route exact path="/home/messages" component={Messages} />
+          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/tasks" component={Tasks} />
+          <Route exact path="/sprint" component={Sprint} />
+          <Route exact path="/backlog" component={Backlog} />
+          <Route exact path="/team" component={Team} />
+          <Route exact path="/messages" component={Messages} />
         </div>
       </BrowserRouter>
     </div>
