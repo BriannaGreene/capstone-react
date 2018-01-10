@@ -5,16 +5,16 @@ import React from 'react'
 const Task = ({ id, title, description }) => {
 
   return (
-    <div className="div">
-      <h2>Ticket</h2>
-      <div>
-        {id}
+    <div className="ticket-container">
+      <div className="ticket-title-container">
+        <div className="labels-container">labels</div>
+        <span>{title}</span>
       </div>
-      <div>
-        {title}
+      <div className="ticket-assignees-container">
+        assignees
       </div>
-      <div>
-        {description}
+      <div className="ticket-status-container">
+        progress status graph
       </div>
     </div>
   )

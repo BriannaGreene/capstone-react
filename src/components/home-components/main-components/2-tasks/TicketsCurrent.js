@@ -35,29 +35,21 @@ const TicketsCurrent = ( state ) => {
 
 
     return (
-      <div className="main-body">
-        <div className="main-body-top">
+        <div>
           <div>
-            <h2>Your Tasks</h2>
-          </div>
-          <div>
-            tickets
-          </div>
-          <div>
-            inprogress header
+            <h3>In Progress</h3>
           </div>
           <div>
             { ticketsInProgress }
           </div>
           <div>
-            to do header
+            <h3>To Do</h3>
           </div>
           <div>
             { ticketsToDo }
           </div>
         </div>
 
-      </div>
     )
 
 

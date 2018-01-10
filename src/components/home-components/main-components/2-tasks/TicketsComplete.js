@@ -17,8 +17,7 @@ const TicketsComplete = ( state ) => {
   ))
 
   return (
-    <div className="main-body">
-      <div className="main-body-top">
+      <div>
         <div>
           <h2>Your Tasks</h2>
         </div>
@@ -32,7 +31,6 @@ const TicketsComplete = ( state ) => {
           { ticketsDone }
         </div>
       </div>
-    </div>
   )
 
 

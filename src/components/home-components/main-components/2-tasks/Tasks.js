@@ -8,24 +8,21 @@ import TicketsAll from './TicketsAll'
 const Tasks = () => {
 
   return (
-    <div className="main-body">
-      <h2>Your Tasks</h2>
-      <ul>
+    <div>
+      <h3 className="section-title">Your Tasks</h3>
+      <ul className="tasks-nav">
         <li><NavLink to="/tasks">My Current Tasks</NavLink></li>
+        <li>  |  </li>
         <li><NavLink to="/tasks/complete">My Complete Tasks</NavLink></li>
+        <li>  |  </li>
         <li><NavLink to="/tasks/all">All My Tasks</NavLink></li>
       </ul>
-      <div className="main-body-top">
-        <div className="div">
-          <h2>Body components</h2>
-        </div>
-        <div>
-          <Switch>
-            <Route exact path="/tasks" component={TicketsCurrent}></Route>
-            <Route exact path="/tasks/complete" component={TicketsComplete}></Route>
-            <Route exact path="/tasks/all" component={TicketsAll}></Route>
-          </Switch>
-        </div>
+      <div className="div">
+        <Switch>
+          <Route exact path="/tasks" component={TicketsCurrent}></Route>
+          <Route exact path="/tasks/complete" component={TicketsComplete}></Route>
+          <Route exact path="/tasks/all" component={TicketsAll}></Route>
+        </Switch>
       </div>
     </div>
   )

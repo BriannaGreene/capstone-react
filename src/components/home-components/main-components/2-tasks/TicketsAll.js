@@ -18,8 +18,7 @@ const TicketsAll = ( state ) => {
 
 
   return (
-    <div className="main-body">
-      <div className="main-body-top">
+      <div>
         <div>
           <h2>Your Tasks</h2>
         </div>
@@ -34,7 +33,6 @@ const TicketsAll = ( state ) => {
         </div>
       </div>
 
-    </div>
   )
 
 
