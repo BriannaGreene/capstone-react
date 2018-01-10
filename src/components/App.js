@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 // import { bindActionCreators } from 'redux'
@@ -20,7 +20,11 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchUser()
+    // console.log(this.props.auth);
+    this.props.getTickets(26)
+    // console.log('props in app js: ', this.props);
   }
+
 
 
   render() {
@@ -40,8 +44,8 @@ class App extends Component {
   }
 }
 
-function mapStateToProps({ auth }) {
-  return { auth }
+function mapStateToProps({ auth, user_tickets }) {
+  return { auth, user_tickets }
 }
 
 // const mapDispatchToProps = dispatch => ({
