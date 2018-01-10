@@ -3,7 +3,7 @@ import FirstNav from './home-components/FirstNav'
 import SecondNav from './home-components/SecondNav'
 import MainContent from './home-components/MainContent'
 
-const Dashboard = () => {
+const Home = ({ props }) => {
   return (
     <div className="container-fluid">
       <FirstNav />
@@ -13,4 +13,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Home
