@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import Header from './Header'
@@ -10,60 +9,24 @@ import Backlog from './main-components/4-backlog/Backlog'
 import Team from './main-components/5-team/Team'
 import Messages from './main-components/6-messages/Messages'
 
-// const MainContent = () => {
-//   return (
-//     <div id="main-content">
-//       <div className="main-header">
-//         <Header />
-//       </div>
-//       <div className="div">
-//         <Switch>
-//           <Route exact path="/" component={Dashboard} />
-//           <Route exact path="/tasks" component={Tasks} />
-//           <Route exact path="/sprint" component={Sprint} />
-//           <Route exact path="/backlog" component={Backlog} />
-//           <Route exact path="/team" component={Team} />
-//           <Route exact path="/messages" component={Messages} />
-//         </Switch>
-//       </div>
-//     </div>
-//   )
-// }
-//
-// export default MainContent
-
-
-class MainContent extends Component {
-
-
-
-  render() {
-    let tickets = this.props.user_tickets
-    console.log(tickets);
-
-    return (
-      <div id="main-content">
-        <div className="main-header">
-          <Header />
-        </div>
-        <div className="div">
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route exact path="/tasks" component={Tasks} tickets={tickets} />
-            <Route exact path="/sprint" component={Sprint} />
-            <Route exact path="/backlog" component={Backlog} />
-            <Route exact path="/team" component={Team} />
-            <Route exact path="/messages" component={Messages} />
-          </Switch>
-        </div>
+const MainContent = () => {
+  return (
+    <div id="main-content">
+      <div className="main-header">
+        <Header />
       </div>
-    )
-  }
-
+      <div className="div">
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/tasks" component={Tasks} />
+          <Route exact path="/sprint" component={Sprint} />
+          <Route exact path="/backlog" component={Backlog} />
+          <Route exact path="/team" component={Team} />
+          <Route exact path="/messages" component={Messages} />
+        </Switch>
+      </div>
+    </div>
+  )
 }
 
-function mapStateToProps({ user_tickets }) {
-  return { user_tickets }
-}
-
-export default connect(mapStateToProps)(MainContent)
+export default MainContent

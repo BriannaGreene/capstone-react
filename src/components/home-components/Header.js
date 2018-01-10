@@ -13,7 +13,7 @@ const Header = () => {
     <div className="div">
       <Switch>
         <Route exact path="/" component={Header01} />
-        <Route exact path="/tasks" component={Header02} />
+        <Route path="/tasks" component={Header02} />
         <Route exact path="/sprint" component={Header03} />
         <Route exact path="/backlog" component={Header04} />
         <Route exact path="/team" component={Header05} />
