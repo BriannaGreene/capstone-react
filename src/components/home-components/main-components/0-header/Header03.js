@@ -3,8 +3,8 @@ import React from 'react'
 const Header03 = () => {
   return (
     <div>
-      <h2 className="main-heading">Sprint Name</h2>
-      <span className="main-sub-heading">Graphical Overview of Sprint with Time breakdown</span>
+      <h2 className="main-heading">g62 Capstone Sprint</h2>
+      <span className="main-sub-heading">Graphical Overviews of Sprint</span>
     </div>
   )
 }

@@ -19,12 +19,13 @@ class App extends Component {
     this.props.fetchUser()
     this.props.getTickets(5)
     this.props.allUsers()
+    this.props.getWeather()
   }
 
 
 
   render() {
-    console.log(this.props);
+    console.log('PROPS FROM APP JS RENDER', this.props);
     return (
       <div className="div">
         <BrowserRouter>
@@ -40,8 +41,8 @@ class App extends Component {
   }
 }
 
-function mapStateToProps({ auth, users, user_tickets }) {
-  return { auth, users, user_tickets }
+function mapStateToProps({ auth, users, user_tickets, weather }) {
+  return { auth, users, user_tickets, weather }
 }
 
 // const mapDispatchToProps = dispatch => ({

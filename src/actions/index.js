@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { FETCH_USER, ALL_USERS, GET_TICKETS } from './types'
+import { FETCH_USER, ALL_USERS, GET_TICKETS, GET_WEATHER, GET_USER } from './types'
 
 export const fetchUser = () => {
   return async dispatch => {
@@ -8,6 +8,14 @@ export const fetchUser = () => {
     dispatch({ type: FETCH_USER, payload: res.data[0] })
 
     if (res.data[0].id) getTickets(res.data[0].id)
+  }
+}
+
+export const getUser = (id) => {
+  return async dispatch => {
+    const res = await axios.get(`${process.env.REACT_APP_API}/user/${id}`)
+    console.log('user from get user: ', res.data);
+    dispatch({ type: GET_USER, payload: res.data[0] })
   }
 }
 
@@ -25,5 +33,13 @@ export const getTickets = (id) => {
   return async dispatch => {
     const res = await axios.get(`${process.env.REACT_APP_API}/tickets/user/${id}`)
     dispatch({ type: GET_TICKETS, payload: res.data })
+  }
+}
+
+export const getWeather = () => {
+  return async dispatch => {
+    const res = await axios.get(`${process.env.REACT_APP_API}/weather`)
+    console.log('darksky data: ', res);
+    dispatch({ type: GET_WEATHER, payload: res })
   }
 }

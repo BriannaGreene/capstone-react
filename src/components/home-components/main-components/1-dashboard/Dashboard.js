@@ -1,27 +1,18 @@
 import React from 'react'
-import DashboardTime from './DashboardTime'
+import DashboardWeather from './DashboardWeather'
 import DashboardNotes from './DashboardNotes'
-import DashboardContacts from './DashboardContacts'
 
 const Dashboard = () => {
   return (
 
-    <div className="main-body">
-      <div className="main-body-top">
-        <div className="top-split">
-          <div className="top-left">
-            <DashboardTime />
-          </div>
-          <div>
-            <DashboardNotes />
-          </div>
-        </div>
+    <div className="main-body div">
+      <div className="dash-body-top">
+        <DashboardWeather />
       </div>
-      <div>
-        <DashboardContacts />
+      <div className="dash-body-bottom">
+        <DashboardNotes />
       </div>
     </div>
-
   )
 }
 

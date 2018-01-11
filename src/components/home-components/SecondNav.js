@@ -47,7 +47,7 @@ class SecondNav extends Component {
               <NavLink to="/sprint" className="second-text">Sprint Overview</NavLink>
             </div>
           </div>
-          <div className="nav-item-box">
+          {/* <div className="nav-item-box">
             <div className="nav-icon">
               <NavLink to="/backlog">
                 <i className="fa fa-backward fa-2x second-icon"></i>
@@ -66,7 +66,7 @@ class SecondNav extends Component {
             <div className="nav-text-box">
               <NavLink to="/team" className="second-text">Team Members</NavLink>
             </div>
-          </div>
+          </div> */}
           <div className="nav-item-box">
             <div className="nav-icon">
               <NavLink to="/messages">

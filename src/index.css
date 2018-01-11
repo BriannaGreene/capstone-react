@@ -6,15 +6,15 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .container-fluid { display: flex; height: 100%; }
 
 /****************** First Nav Section - left most sidebar ******************/
-#first-nav { background-color: #003dd6; width: 40px; padding: 20px; }
+#first-nav { background-color: #464646; width: 35px; padding: 30px 10px 10px 10px; }
 #icon-holder { height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: space-around; }
-.sidebar-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: white; }
+.sidebar-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #7a7a7a; }
 
 /************* Second Nav Section - navigation for main content *************/
 #second-nav { background-color: #dedede; min-width: 20%; padding: 20px; }
-#nav-link-holder { height: 100%; }
-.nav-item-box { display: flex; justify-content: space-between; }
-.nav-icon { min-width: 60px; min-height: 60px; display: flex; align-items: center; justify-content: center; }
+#nav-link-holder { height: 100%; border: solid 1px black;}
+.nav-item-box { display: flex; justify-content: space-between; border: solid 1px black; }
+.nav-icon { min-width: 60px; min-height: 60px; display: flex; align-items: center; justify-content: center; border: solid 1px black; }
 #nav-header-text { width: 75%; margin-top: 20px; margin-bottom: 20px; }
 #project-teamname { margin: 0; font-size: 30px; color: #464646; }
 #project-subtitle { margin: 0; font-size: 15px; color: #7a7a7a; }
@@ -23,51 +23,94 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .second-icon { color: #004dff; }
 .second-text { font-weight: bold; color: #004dff; font-size: 18px; text-decoration: none; }
 
-/*************** Main Content Section - main body content area ***************/
+/*********************** Main Body Content Styling ************************/
 #main-content { width: 90%; padding: 20px; }
-.main-header { border-bottom: solid 1px #7a7a7a; height: 60px; margin-bottom: 20px;}
+.main-header { border-bottom: solid 1px #7a7a7a; height: 60px; margin-bottom: 20px; background-color: #FFBB28;}
 .main-heading { margin: 0 0 5px 0; font-size: 30px; color: #464646; }
 .main-sub-heading { font-weight: bold; font-size: 13px; color: #464646; margin-left: 3px; }
 
 .main-body {
-  /* border: solid 1px black; */
-  height: 90%;
+  border: solid 1px black;
+  height: 95%;
   display: flex;
   flex-direction: column;
 }
 
 .main-body-top {
-  /* border: solid 1px black; */
+  border: solid 1px black;
   height: 50%;
 }
 
 .main-body-bottom {
-  /* border: solid 1px black; */
+  border: solid 1px black;
   height: 50%;
-  display: flex;
+  margin-top: 20px;
+}
+.body-split { display: flex; flex-direction: row; }
+
+.body-left { width: 50%; padding-right: 10px;
+  border: solid 1px black;
+}
+
+.body-right { width: 50%; padding-left: 10px;
+  border: solid 1px black;
+}
+
+/*********************** Dashboard Section Styling ************************/
+.dash-body-top {
+  border: solid 1px black;
+  height: 40%;
+}
+
+.dash-body-bottom {
+  border: solid 1px black;
+  height: 60%;
   margin-top: 20px;
 }
 
-.body-left {
-  width: 50%;
-  padding-right: 10px
+.today-weather-container {
+  width: 30%;
+  height: 300px;
+  background-color: yellow;
+  margin-right: 10px;
+  border: solid 1px #ebebeb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-.body-right {
-  width: 50%;
-  padding-left: 10px
+.forecast-weather-container {
+  width: 70%;
+  margin-left: 10px;
+  border: solid 1px #ebebeb;
+  border-radius: 10px;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-
-.top-split { display: flex; flex-direction: row; }
-
-/* .top-left {
+.weekly-forcast-container {
   border: solid 1px black;
-  width: 50%;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+/* .forcast-div {
+  border: solid 1px black;
+  height: 100%;
+  width: 50px;
 } */
 
-.section-title { margin-top: 10px; margin-bottom: 5px; }
-/*************** Tasks Page - ?? ***************/
+
+/*********************** Tasks Section Styling ************************/
 .tasks-nav {
   padding: 0;
   margin: 20px 0 20px 0;
@@ -82,8 +125,6 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   color: #004dff;
   font-size: 18px;
 }
-
-/*************** Individual Tickets - ticket container ***************/
 
 .ticket-container {
   /* border: solid 1px black; */
@@ -102,14 +143,15 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   /* padding: 10px; */
 }
 
-.ticket-title {
+/* .ticket-title {
   margin: 5px;
   font-size: 15px;
-}
+} */
 
 .tickets-section-title {
   font-weight: bold;
   color: #464646;
+  margin: 5px;
 }
 
 .ticket-assignees-container {
@@ -153,7 +195,7 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   background-color: purple;
 }
 
-/*************** Sprint Graph Overview ***************/
+/*********************** Sprint Graphs Styling ************************/
 .graph-title-container {
   display: flex;
   justify-content: center;

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Messages = () => {
   return (
-    <div>
+    <div className="">
       <div>
         <span className="tickets-section-title">Messages</span>
       </div>
