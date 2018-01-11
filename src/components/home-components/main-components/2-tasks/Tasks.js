@@ -9,13 +9,12 @@ const Tasks = () => {
 
   return (
     <div>
-      <h3 className="section-title">Your Tasks</h3>
       <ul className="tasks-nav">
-        <li><NavLink to="/tasks">My Current Tasks</NavLink></li>
+        <li><NavLink to="/tasks" className="tasks-nav-li">My Current Tasks</NavLink></li>
         <li>  |  </li>
-        <li><NavLink to="/tasks/complete">My Complete Tasks</NavLink></li>
+        <li><NavLink to="/tasks/complete" className="tasks-nav-li">My Complete Tasks</NavLink></li>
         <li>  |  </li>
-        <li><NavLink to="/tasks/all">All My Tasks</NavLink></li>
+        <li><NavLink to="/tasks/all" className="tasks-nav-li">All My Tasks</NavLink></li>
       </ul>
       <div className="div">
         <Switch>

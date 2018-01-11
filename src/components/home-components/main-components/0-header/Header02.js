@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header02 = () => {
   return (
-    <div className="main-header-left">
+    <div>
       <h2 className="main-heading">Sprint Name</h2>
-      <span>Your Current Tasks</span>
+      <span className="main-sub-heading">Your Current Tasks</span>
     </div>
   )
 }

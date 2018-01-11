@@ -39,13 +39,13 @@ const TicketsCurrent = ( state ) => {
   return (
       <div>
         <div>
-          <h3>In Progress</h3>
+          <span className="tickets-section-title">In Progress</span>
         </div>
         <div>
           { ticketsInProgress }
         </div>
         <div>
-          <h3>To Do</h3>
+          <span className="tickets-section-title">To Do</span>
         </div>
         <div>
           { ticketsToDo }

@@ -6,99 +6,31 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .container-fluid { display: flex; height: 100%; }
 
 /****************** First Nav Section - left most sidebar ******************/
-#first-nav { background-color: grey; width: 40px; padding: 20px; }
-
-#icon-holder {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border: solid black 1px;
-  /* width: 40px; */
-}
-
-.sidebar-icon {
-  width: 40px;
-  height: 40px;
-  background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+#first-nav { background-color: #003dd6; width: 40px; padding: 20px; }
+#icon-holder { height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: space-around; }
+.sidebar-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: white; }
 
 /************* Second Nav Section - navigation for main content *************/
-#second-nav {
-  background-color: yellow;
-  min-width: 20%;
-  padding: 20px;
-}
-
-#nav-link-holder {
-  border: solid black 1px;
-  height: 100%;
-}
-
-.nav-item-box {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-icon {
-  min-width: 60px;
-  min-height: 60px;
-  border: black solid 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#nav-header-text {
-  width: 75%;
-}
-
-#project-teamname {
-  margin: 0;
-}
-
-#project-subtitle {
-  margin: 0;
-}
-
-.nav-text-box {
-  width: 75%;
-  border: solid black 1px;
-  display: flex;
-  align-items: center;
-}
-
-.nav-link {
-  font-size: 15px;
-}
+#second-nav { background-color: #dedede; min-width: 20%; padding: 20px; }
+#nav-link-holder { height: 100%; }
+.nav-item-box { display: flex; justify-content: space-between; }
+.nav-icon { min-width: 60px; min-height: 60px; display: flex; align-items: center; justify-content: center; }
+#nav-header-text { width: 75%; margin-top: 20px; margin-bottom: 20px; }
+#project-teamname { margin: 0; font-size: 30px; color: #464646; }
+#project-subtitle { margin: 0; font-size: 15px; color: #7a7a7a; }
+.nav-text-box { width: 75%; display: flex; align-items: center; }
+.nav-link { font-size: 15px; }
+.second-icon { color: #004dff; }
+.second-text { font-weight: bold; color: #004dff; font-size: 18px; text-decoration: none; }
 
 /*************** Main Content Section - main body content area ***************/
-#main-content {
-  background-color: green;
-  width: 80%;
-  padding: 20px;
-}
-
-.main-header {
-  border: solid 1px black;
-  height: 10%;
-}
-
-.main-header-left {
-
-}
-
-.main-heading {
-  margin: 0;
-
-}
+#main-content { width: 90%; padding: 20px; }
+.main-header { border-bottom: solid 1px #7a7a7a; height: 60px; }
+.main-heading { margin: 0 0 5px 0; font-size: 30px; color: #464646; }
+.main-sub-heading { font-weight: bold; font-size: 13px; color: #464646; margin-left: 3px; }
 
 .main-body {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -107,7 +39,6 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .main-body-top {
   border: solid 1px black;
   /* height: 50%; */
-
 }
 
 .main-body-bottom {
@@ -115,49 +46,57 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   /* height: 50%; */
 }
 
-.top-split {
-  display: flex;
-  flex-direction: row;
-}
+.top-split { display: flex; flex-direction: row; }
 
-.top-left {
+/* .top-left {
   border: solid 1px black;
   width: 50%;
-}
+} */
 
-.section-title {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
+.section-title { margin-top: 10px; margin-bottom: 5px; }
 /*************** Tasks Page - ?? ***************/
 .tasks-nav {
   padding: 0;
-  margin: 0;
+  margin: 20px 0 20px 0;
   display: flex;
   list-style: none;
 }
 
-.tasks-nav li {
-  margin-right: 10px;
+.tasks-nav-li {
+  margin: 20px 10px 5px 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #004dff;
+  font-size: 18px;
 }
 
 /*************** Individual Tickets - ticket container ***************/
 
 .ticket-container {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   width: 100%;
-  height: 50px;
+  /* height: 50px; */
   margin-top: 5px;
   display: flex;
   background-color: #e6e6e6;
-  padding: 5px;
+  padding: 5px 0 5px 5px;
 }
 
 .ticket-title-container {
-  border: solid 1px black;
-  width: 70%;
+  /* border: solid 1px black; */
+  width: 75%;
   height: 100%;
+  /* padding: 10px; */
+}
 
+.ticket-title {
+  margin: 5px;
+  font-size: 15px;
+}
+
+.tickets-section-title {
+  font-weight: bold;
+  color: #464646;
 }
 
 .ticket-assignees-container {
@@ -168,14 +107,14 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 
 .ticket-status-container {
   border: solid 1px black;
-  width: 15%;
+  width: 10%;
   height: 100%;
 
 }
 
 .labels-container {
-  border: solid 1px black;
-  height: 10px;
+  /* border: solid 1px black; */
+  /* height: 10px; */
   min-width: 20px;
   display: flex;
 
@@ -186,7 +125,7 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   height: 8px;
   margin-right: 5px;
   border-radius: 10px;
-  border: black solid 1px;
+  /* border: black solid 1px; */
 }
 
 .pink {

@@ -25,13 +25,7 @@ const TicketsAll = ( state ) => {
   return (
       <div>
         <div>
-          <h2>Your Tasks</h2>
-        </div>
-        <div>
-          tickets
-        </div>
-        <div>
-          All tickets
+          <span className="tickets-section-title">All Tasks</span>
         </div>
         <div>
           { ticketsAll }

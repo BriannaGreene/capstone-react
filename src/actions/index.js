@@ -21,7 +21,6 @@ export const allUsers = () => {
 
 export const getTickets = (id) => {
   // console.log('get tickets: ', id);
-
   console.log('id coming into get tickets: ', id);
   return async dispatch => {
     const res = await axios.get(`${process.env.REACT_APP_API}/tickets/user/${id}`)
