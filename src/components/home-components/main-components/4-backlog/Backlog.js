@@ -2,12 +2,12 @@ import React from 'react'
 
 const Backlog = () => {
   return (
-    <div className="main-body">
+    <div>
       <div>
-        Backlog of tasks
+        <span className="tickets-section-title">Backlog tasks</span>
       </div>
       <div>
-        display each task
+        delete this section... too much
       </div>
     </div>
   )
