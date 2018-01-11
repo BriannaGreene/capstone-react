@@ -150,12 +150,14 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   margin-top: 5px;
   display: flex;
   background-color: #e6e6e6;
+  padding: 5px;
 }
 
 .ticket-title-container {
   border: solid 1px black;
   width: 70%;
   height: 100%;
+
 }
 
 .ticket-assignees-container {
@@ -168,10 +170,33 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   border: solid 1px black;
   width: 15%;
   height: 100%;
+
 }
 
 .labels-container {
   border: solid 1px black;
-  height: 12px;
+  height: 10px;
   min-width: 20px;
+  display: flex;
+
+}
+
+.label {
+  width: 50px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 10px;
+  border: black solid 1px;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.red {
+  background-color: red;
+}
+
+.purple {
+  background-color: purple;
 }

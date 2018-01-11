@@ -11,24 +11,20 @@ import Home from './Home'
 
 class App extends Component {
 
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     user: this.props.auth,
-  //   }
-  // }
+  constructor(props) {
+    super(props)
+  }
 
   componentDidMount() {
     this.props.fetchUser()
-    // console.log(this.props.auth);
-    this.props.getTickets(26)
-    // console.log('props in app js: ', this.props);
+    this.props.getTickets(5)
+    this.props.allUsers()
   }
 
 
 
   render() {
-    console.log('props from app render', this.props);
+    console.log(this.props);
     return (
       <div className="div">
         <BrowserRouter>
@@ -44,8 +40,8 @@ class App extends Component {
   }
 }
 
-function mapStateToProps({ auth, user_tickets }) {
-  return { auth, user_tickets }
+function mapStateToProps({ auth, users, user_tickets }) {
+  return { auth, users, user_tickets }
 }
 
 // const mapDispatchToProps = dispatch => ({

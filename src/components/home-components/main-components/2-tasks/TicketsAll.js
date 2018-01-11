@@ -13,6 +13,11 @@ const TicketsAll = ( state ) => {
       id={item.id}
       title={item.title}
       description={item.description}
+      status={item.status}
+      labels={item.labels}
+      team={item.team}
+      assignees={item.assignees}
+      priority={item.priority}
     />
   ))
 
