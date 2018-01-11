@@ -15,7 +15,7 @@ const MainContent = () => {
       <div className="main-header">
         <Header />
       </div>
-      <div className="main-body">
+      <div>
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/tasks" component={Tasks} />
