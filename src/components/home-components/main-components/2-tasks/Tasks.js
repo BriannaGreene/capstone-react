@@ -8,7 +8,7 @@ import TicketsAll from './TicketsAll'
 const Tasks = () => {
 
   return (
-    <div>
+    <div className="main-body">
       <ul className="tasks-nav">
         <li><NavLink to="/tasks" className="tasks-nav-li">My Current Tasks</NavLink></li>
         <li>  |  </li>
@@ -16,7 +16,7 @@ const Tasks = () => {
         <li>  |  </li>
         <li><NavLink to="/tasks/all" className="tasks-nav-li">All My Tasks</NavLink></li>
       </ul>
-      <div className="div">
+      <div>
         <Switch>
           <Route exact path="/tasks" component={TicketsCurrent}></Route>
           <Route exact path="/tasks/complete" component={TicketsComplete}></Route>

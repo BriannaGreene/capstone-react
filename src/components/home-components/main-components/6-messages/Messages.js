@@ -30,7 +30,7 @@ const Messages = ( state ) => {
   ))
 
   return (
-    <div className="">
+    <div className="main-body">
       <div id="message-board">
         {eachMessage}
       </div>

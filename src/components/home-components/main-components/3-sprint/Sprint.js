@@ -5,28 +5,31 @@ import ScatterChartComp from './ScatterChart'
 
 const Sprint = () => {
   return (
-    <div className="main-body-top">
-      <div className="graph-title-container">
-        <span className="graph-title">Hours Left in Sprint: 100</span>
-      </div>
-      <div>
-        <StackedBarChart />
-      </div>
-      <div className="sprint-body-bottom">
-        <div className="body-left">
-          <div className="graph-title-container">
-            <span className="graph-title">Tickets Status</span>
+    <div className="main-body">
+      <div className="sprint-body-top">
+        <div className="graph-title-container">
+          <span className="graph-title">Team: g62 - Hours Left for Capstone: 100</span>
+        </div>
+        <div>
+          <StackedBarChart />
+        </div>
+        <div className="sprint-body-bottom">
+          <div className="sprint-body-left">
+            <div className="graph-title-container">
+              <span className="graph-title">g62 Tickets Status</span>
+            </div>
+            <div>
+              <PieChart />
+            </div>
           </div>
-          <div>
-            <PieChart />
+          <div className="sprint-body-right">
+            <div className="graph-title-container">
+              <span className="graph-title">Team Sprints Comparison</span>
+            </div>
+            <ScatterChartComp />
           </div>
         </div>
-        <div className="body-right">
-          <ScatterChartComp />
-        </div>
-
       </div>
-
     </div>
   )
 }

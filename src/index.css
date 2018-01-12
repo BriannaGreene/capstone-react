@@ -24,8 +24,11 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .second-text { font-weight: bold; color: #004dff; font-size: 18px; text-decoration: none; }
 
 /*********************** Main Body Content Styling ************************/
-#main-content { width: 90%; padding: 20px; }
-.main-header { border-bottom: solid 1px #7a7a7a; height: 60px; margin-bottom: 20px; background-color: #FFBB28;}
+#main-content { width: 90%; }
+
+.main-header { border-bottom: solid 1px #7a7a7a; height: 60px; padding: 20px; background-color: #FFBB28;
+}
+
 .main-heading { margin: 0 0 5px 0; font-size: 30px; color: #464646; }
 .main-sub-heading { font-weight: bold; font-size: 13px; color: #464646; margin-left: 3px; }
 
@@ -34,6 +37,7 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   height: 95%;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .main-body-top {
@@ -122,9 +126,9 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   width: 200px;
   height: 200px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 /*********************** Tasks Section Styling ************************/
@@ -213,14 +217,18 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 }
 
 /*********************** Sprint Graphs Styling ************************/
-.sprint-body-bottom {
-  border: solid 1px black;
+.sprint-body-top {
   height: 50%;
-  margin-top: 20px;
-  display: flex;
-  
 }
 
+.sprint-body-bottom { height: 50%; margin-top: 20px; display: flex;
+}
+
+.sprint-body-left { width: 50%; padding-right: 10px;
+}
+
+.sprint-body-right { width: 50%; padding-left: 10px;
+}
 
 .graph-title-container {
   display: flex;

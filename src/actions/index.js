@@ -7,6 +7,9 @@ import {
   GET_USER,
   GET_MESSAGES,
   COMPOSE_MESSAGE,
+  NEW_STICKY,
+  EDIT_STICKY,
+  DELETE_STICKY
 } from './types'
 
 export const fetchUser = () => {
@@ -58,29 +61,23 @@ export const getMessages = () => {
 }
 
 export const composeMessage = (message, state) => {
-  console.log('message coming to action: ', message);
-  console.log('state coming to action: ', state);
-
   return async dispatch => {
     const res = await axios.post(`${process.env.REACT_APP_API}/messages`, {
       userId: message.userId,
       message: message.message
     })
-    console.log('res from compose message', res.data);
     dispatch({ type: COMPOSE_MESSAGE, payload: res.data })
   }
 }
 
-// async composeMessage(message) {
-//   const response = await fetch(`${process.env.REACT_APP_API_URL}`, {
-//     method: 'POST',
-//     body: JSON.stringify(message),
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'Accept': 'application/json'
-//     }
-//   })
-//   const newMessage = await response.json()
-//   const newMessageList = [...this.state.messages, newMessage]
-//   this.setState({ messages: newMessageList, filtered: newMessageList, composing: false })
-// }
+export const newSticky = () => {
+  console.log('post a new sticky with empty string');
+}
+
+export const editSticky = (note) => {
+  console.log('patch sticky... how do you patch with no id.. maybe need new table of stickys');
+}
+
+export const deleteSticky = (note) => {
+  console.log('get note, find matching note, delete, or new table with ids');
+}
