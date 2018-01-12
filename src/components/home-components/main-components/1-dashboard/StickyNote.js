@@ -18,8 +18,15 @@ const StickyNote = ({id, note, user_id, state}) => {
     state.newSticky(user_id)
   }
 
+  const updateSticky = (e) => {
+    e.preventDefault()
+    let update = e.target.value
+    console.log(e.target.value);
+    state.editSticky(id, update)
+  }
+
   return (
-    <div className="sticky">
+    <div className="sticky" contenteditable>
       <div className="sticky-header">
         <button className="" onClick={createSticky}><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
         <button className="" onClick={deleteNote}><i className="fa fa-minus-circle" aria-hidden="true"></i></button>
@@ -27,7 +34,11 @@ const StickyNote = ({id, note, user_id, state}) => {
 
       </div>
       <div>
-        {note}
+        {/* <ul>
+          <li>{note}</li>
+        </ul> */}
+        {/* <input className="input-note" type="text" wrap="soft" id="uname" name="name" placeholder={note}></input> */}
+        <textarea className="input-note" name="text" rows="14" cols="1" wrap="soft" onChange={updateSticky}>{note}</textarea>
       </div>
     </div>
   )

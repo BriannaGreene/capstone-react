@@ -93,8 +93,16 @@ export const newSticky = (id) => {
   }
 }
 
-export const editSticky = (id) => {
-  console.log('patch sticky... how do you patch with no id.. maybe need new table of stickys');
+export const editSticky = (id, message) => {
+  console.log('patch sticky... how do you patch with no id.. maybe need new table of stickys', id, message);
+  return async dispatch => {
+    const res = await axios.patch(`${process.env.REACT_APP_API}/notes/${id}`, {
+      id: id,
+      note: message
+    })
+    console.log('response from new sticky: ', res.data);
+    // dispatch({ type: NEW_STICKY, payload: res.data })
+  }
 }
 
 export const deleteSticky = (id) => {
