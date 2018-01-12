@@ -7,6 +7,7 @@ import {
   GET_USER,
   GET_MESSAGES,
   COMPOSE_MESSAGE,
+  GET_STICKIES,
   NEW_STICKY,
   EDIT_STICKY,
   DELETE_STICKY
@@ -34,10 +35,10 @@ export const allUsers = () => {
   }
 }
 
-export const getTickets = id => {
-  // console.log('get tickets: ', id);
-  console.log('id coming into get tickets: ', id)
+export const getTickets = () => {
   return async dispatch => {
+    const response = await axios.get('/api/current_user')
+    let id = response.data[0].id
     const res = await axios.get(
       `${process.env.REACT_APP_API}/tickets/user/${id}`
     )
@@ -70,14 +71,36 @@ export const composeMessage = (message, state) => {
   }
 }
 
-export const newSticky = () => {
-  console.log('post a new sticky with empty string');
+export const getStickies = () => {
+  return async dispatch => {
+    const response = await axios.get('/api/current_user')
+    let id = response.data[0].id
+    const res = await axios.get(`${process.env.REACT_APP_API}/notes/${id}`)
+    dispatch({ type: GET_STICKIES, payload: res.data})
+  }
 }
 
-export const editSticky = (note) => {
+export const newSticky = (id) => {
+  console.log('post a new sticky with empty string');
+  console.log('send user id along:', id);
+  return async dispatch => {
+    const res = await axios.post(`${process.env.REACT_APP_API}/notes`, {
+      note: "",
+      userId: id
+    })
+    console.log('response from new sticky: ', res.data);
+    dispatch({ type: NEW_STICKY, payload: res.data })
+  }
+}
+
+export const editSticky = (id) => {
   console.log('patch sticky... how do you patch with no id.. maybe need new table of stickys');
 }
 
-export const deleteSticky = (note) => {
+export const deleteSticky = (id) => {
   console.log('get note, find matching note, delete, or new table with ids');
+  return async dispatch => {
+    const res = await axios.delete(`${process.env.REACT_APP_API}/notes/${id}`, {id: id})
+    dispatch({ type: DELETE_STICKY, payload: res.data })
+  }
 }

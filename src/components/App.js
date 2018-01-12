@@ -13,10 +13,11 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchUser()
-    this.props.getTickets(11)
+    this.props.getTickets()
     this.props.allUsers()
     // this.props.getWeather()
     this.props.getMessages()
+    this.props.getStickies()
   }
 
 
@@ -38,8 +39,8 @@ class App extends Component {
   }
 }
 
-function mapStateToProps({ auth, users, user_tickets, weather, messages }) {
-  return { auth, users, user_tickets, weather, messages }
+function mapStateToProps({ auth, users, user_tickets, weather, messages, stickies }) {
+  return { auth, users, user_tickets, weather, messages, stickies }
 }
 
 // const mapDispatchToProps = dispatch => ({

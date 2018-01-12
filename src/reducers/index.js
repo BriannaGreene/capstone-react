@@ -6,6 +6,7 @@ import getUser from './getUser'
 import getWeather from './getWeather'
 import getMessages from './getMessages'
 import composeMessage from './composeMessage'
+import getStickies from './getStickies'
 
 export default combineReducers({
   auth: authReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
   user: getUser,
   weather: getWeather,
   messages: getMessages,
-  compose: composeMessage
+  compose: composeMessage,
+  stickies: getStickies
 })
