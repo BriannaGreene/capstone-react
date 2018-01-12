@@ -5,6 +5,7 @@ const data = [
   {name: 'Adam', 'tasks to do': 65, 'in progress': 15, amt: 80},
   {name: 'Alicia', 'tasks to do': 85, 'in progress': 35, amt: 120},
   {name: 'Bill', 'tasks to do': 50, 'in progress': 5, amt: 55},
+  {name: 'Bri', 'tasks to do': 80, 'in progress': 8, amt: 88},
   {name: 'Brodie', 'tasks to do': 30, 'in progress': 20, amt: 60},
   {name: 'Cat', 'tasks to do': 85, 'in progress': 20, amt: 105},
   {name: 'Chris', 'tasks to do': 75, 'in progress': 5, amt: 80},
@@ -28,7 +29,7 @@ const data = [
 const StackedBarChart = () => {
   return (
     <div className="stackedbarchart-container">
-      <BarChart width={1000} height={300} data={data}
+      <BarChart width={1200} height={300} data={data}
             margin={{top: 20, right: 30, left: 20, bottom: 5}}>
         <XAxis dataKey="name"/>
         <YAxis/>

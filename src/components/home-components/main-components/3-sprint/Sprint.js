@@ -1,6 +1,7 @@
 import React from 'react'
 import StackedBarChart from './StackedBarChart'
 import PieChart from './PieChart'
+import ScatterChartComp from './ScatterChart'
 
 const Sprint = () => {
   return (
@@ -11,7 +12,7 @@ const Sprint = () => {
       <div>
         <StackedBarChart />
       </div>
-      <div className="main-body-bottom">
+      <div className="sprint-body-bottom">
         <div className="body-left">
           <div className="graph-title-container">
             <span className="graph-title">Tickets Status</span>
@@ -21,7 +22,7 @@ const Sprint = () => {
           </div>
         </div>
         <div className="body-right">
-
+          <ScatterChartComp />
         </div>
 
       </div>

@@ -66,6 +66,10 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   border: solid 1px black;
   height: 60%;
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: auto;
 }
 
 .today-weather-container {
@@ -109,6 +113,19 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   width: 50px;
 } */
 
+.sticky {
+  border: solid 1px black;
+  margin: 10px;
+  padding: 10px;
+  background-color: pink;
+  font-size: 40px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*********************** Tasks Section Styling ************************/
 .tasks-nav {
@@ -196,6 +213,15 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 }
 
 /*********************** Sprint Graphs Styling ************************/
+.sprint-body-bottom {
+  border: solid 1px black;
+  height: 50%;
+  margin-top: 20px;
+  display: flex;
+  
+}
+
+
 .graph-title-container {
   display: flex;
   justify-content: center;
