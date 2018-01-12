@@ -6,7 +6,7 @@ import {
   GET_WEATHER,
   GET_USER,
   GET_MESSAGES,
-  COMPOSE_MESSAGE
+  COMPOSE_MESSAGE,
 } from './types'
 
 export const fetchUser = () => {

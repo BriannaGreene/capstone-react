@@ -4,13 +4,10 @@ import * as actions from '../../../../actions'
 import Message from './Message'
 
 const Messages = ( state ) => {
-  console.log('state from messages: ', state);
   let messages = state.messages
   let user = state.auth.id
 
   const postMessage = (e) => {
-    console.log('user id???: ', user);
-
     e.preventDefault()
     state.composeMessage({
       userId: user,
@@ -22,20 +19,15 @@ const Messages = ( state ) => {
     return false
   }
 
-
-
   const eachMessage = messages.map(message => (
-
-      <Message
-        key={message.id}
-        id={message.id}
-        user={message.user_id}
-        message={message.message}
-        time={message.created_at}
-      />
-
+    <Message
+      key={message.id}
+      id={message.id}
+      user={message.user_id}
+      message={message.message}
+      time={message.created_at}
+    />
   ))
-
 
   return (
     <div className="">
@@ -50,15 +42,12 @@ const Messages = ( state ) => {
         </form>
       </div>
 
-
     </div>
   )
 }
-
 
 function mapStateToProps({ messages, auth }) {
   return { messages, auth }
 }
 
 export default connect(mapStateToProps, actions)(Messages)
-// export default Messages
