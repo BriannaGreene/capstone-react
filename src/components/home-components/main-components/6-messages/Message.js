@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Message = ({ id, name, message, deleteMessage }) => {
+const Message = ({ id, user, message, time }) => {
 
   // // on click, send id to deleteMessage function
   // const deleteItem = (e) => {
@@ -10,12 +10,15 @@ const Message = ({ id, name, message, deleteMessage }) => {
 
   return (
     <div>
-      <div className="">
+      <div className="message-container">
         <div className="">
-          {name}
+          {user}
         </div>
         <div className="">
           {message}
+        </div>
+        <div>
+          {time}
         </div>
         {/* <div className="">
           <button className="" onClick={deleteItem}><i className={`fa fa-trash`}></i></button>

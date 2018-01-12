@@ -1,41 +1,50 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import * as actions from '../../../../actions'
 import Message from './Message'
 
-const Messages = () => {
+const Messages = ( state ) => {
+  console.log('state from messages: ', state);
+  let messages = state.messages
+  let user = state.auth.id
 
   const postMessage = (e) => {
-    console.log(e.target.message.value);
+    console.log('user id???: ', user);
+
     e.preventDefault()
-    // composeMessage({
-    //   id: messages.length+1,
-    //   name: e.target.name.value,
-    //   message: e.target.message.value
-    // })
-    var frm = document.getElementsByName('message-form')[0];
-   // frm.submit(); // Submit
-   frm.reset();  // Reset
-   return false;
+    state.composeMessage({
+      userId: user,
+      message: e.target.message.value,
+      state: messages
+    })
+    var frm = document.getElementsByName('message-form')[0]
+    frm.reset()
+    return false
   }
 
-  // const eachMessage = filtered.map(message => (
-  //   <Message
-  //     key={message.id}
-  //     id={message.id}
-  //     name={message.name}
-  //     message={message.message}
-  //     deleteMessage={deleteMessage}
-  //   />
-  // ))
+
+
+  const eachMessage = messages.map(message => (
+
+      <Message
+        key={message.id}
+        id={message.id}
+        user={message.user_id}
+        message={message.message}
+        time={message.created_at}
+      />
+
+  ))
 
 
   return (
     <div className="">
       <div id="message-board">
-        Message Area
+        {eachMessage}
       </div>
 
       <div className="">
-        <form  name="message-form" autocomplete="off" onSubmit={postMessage}>
+        <form  name="message-form" autoComplete="off" onSubmit={postMessage}>
             <input id="message-form" name="message" placeholder="Write a messsage!"/>
             {/* <button className="">POST!</button> */}
         </form>
@@ -47,5 +56,9 @@ const Messages = () => {
 }
 
 
+function mapStateToProps({ messages, auth }) {
+  return { messages, auth }
+}
 
-export default Messages
+export default connect(mapStateToProps, actions)(Messages)
+// export default Messages

@@ -11,15 +11,12 @@ import Home from './Home'
 
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.props.fetchUser()
-    this.props.getTickets(5)
+    this.props.getTickets(11)
     this.props.allUsers()
-    this.props.getWeather()
+    // this.props.getWeather()
+    this.props.getMessages()
   }
 
 
@@ -41,8 +38,8 @@ class App extends Component {
   }
 }
 
-function mapStateToProps({ auth, users, user_tickets, weather }) {
-  return { auth, users, user_tickets, weather }
+function mapStateToProps({ auth, users, user_tickets, weather, messages }) {
+  return { auth, users, user_tickets, weather, messages }
 }
 
 // const mapDispatchToProps = dispatch => ({

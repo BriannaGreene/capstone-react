@@ -4,11 +4,15 @@ import tickets from './tickets'
 import allUsers from './allUsers'
 import getUser from './getUser'
 import getWeather from './getWeather'
+import getMessages from './getMessages'
+import composeMessage from './composeMessage'
 
 export default combineReducers({
   auth: authReducer,
   user_tickets: tickets,
   users: allUsers,
   user: getUser,
-  weather: getWeather
+  weather: getWeather,
+  messages: getMessages,
+  compose: composeMessage
 })
