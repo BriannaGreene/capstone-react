@@ -7,12 +7,12 @@ import MainContent from './home-components/MainContent'
 
 class Home extends Component {
 
-  componentDidMount() {
-    this.props.fetchUser()
-    this.props.getTickets()
-    this.props.getStickies()
-    this.props.getMessages()
-  }
+  // componentDidMount() {
+  //   this.props.fetchUser()
+  //   this.props.getTickets()
+  //   this.props.getStickies()
+  //   this.props.getMessages()
+  // }
 
   render() {
     console.log('home page rendering');

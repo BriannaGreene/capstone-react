@@ -26,14 +26,14 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 const PieChartGraph = () => {
   return (
     <div className="stackedbarchart-container">
-      <PieChart width={400} height={350} onMouseEnter={this.onPieEnter}>
+      <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
         <Pie
           data={data}
           cx={200}
-          cy={150}
+          cy={120}
           labelLine={false}
           label={renderCustomizedLabel}
-          outerRadius={150}
+          outerRadius={120}
           fill="#8884d8"
         >
         	{

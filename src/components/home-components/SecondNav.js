@@ -8,15 +8,16 @@ class SecondNav extends Component {
       <div id="second-nav">
         <div id="nav-link-holder">
 
-          <div className="nav-item-box">
-            <div className="nav-icon">
-              <img id="project-avatar" src=".././images/dino-avatar.png" alt="icon"></img>
+          <div id="nav-item-header">
+            <div id="avatar-icon">
+
             </div>
             <div id="nav-header-text">
-              <h2 id="project-teamname">Team Name</h2>
-              <h5 id="project-subtitle">Sprint: capstone projects</h5>
+              <h2 id="project-teamname">Team g62</h2>
+              <span id="project-subtitle">CAPSTONE PRESENTATIONS</span>
             </div>
           </div>
+
           <div className="nav-item-box">
             <div className="nav-icon">
               <NavLink to="/">

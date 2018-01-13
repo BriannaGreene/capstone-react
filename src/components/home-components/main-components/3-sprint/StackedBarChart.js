@@ -3,13 +3,11 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceL
 
 const data = [
   {name: 'Adam', 'tasks to do': 65, 'in progress': 15, amt: 80},
-  {name: 'Alicia', 'tasks to do': 85, 'in progress': 35, amt: 120},
   {name: 'Bill', 'tasks to do': 50, 'in progress': 5, amt: 55},
   {name: 'Bri', 'tasks to do': 80, 'in progress': 8, amt: 88},
   {name: 'Brodie', 'tasks to do': 30, 'in progress': 20, amt: 60},
   {name: 'Cat', 'tasks to do': 85, 'in progress': 20, amt: 105},
   {name: 'Chris', 'tasks to do': 75, 'in progress': 5, amt: 80},
-  {name: 'Craig', 'tasks to do': 30, 'in progress': 10, amt: 40},
   {name: 'Dalton', 'tasks to do': 45, 'in progress': 10, amt: 55},
   {name: 'Danah', 'tasks to do': 105, 'in progress': 10, amt: 115},
   {name: 'Gena', 'tasks to do': 75, 'in progress': 20, amt: 95},
@@ -20,7 +18,6 @@ const data = [
   {name: 'JJ', 'tasks to do': 60, 'in progress': 10, amt: 70},
   {name: 'Jonny', 'tasks to do': 65, 'in progress': 15, amt: 80},
   {name: 'Ken', 'tasks to do': 85, 'in progress': 6, amt: 91},
-  {name: 'Pete', 'tasks to do': 15, 'in progress': 10, amt: 25},
   {name: 'Steve', 'tasks to do': 75, 'in progress': 10, amt: 85},
   {name: 'Tyler', 'tasks to do': 55, 'in progress': 15, amt: 70},
 ];
@@ -29,8 +26,8 @@ const data = [
 const StackedBarChart = () => {
   return (
     <div className="stackedbarchart-container">
-      <BarChart width={1200} height={300} data={data}
-            margin={{top: 20, right: 30, left: 20, bottom: 5}}>
+      <BarChart width={1100} height={250} data={data}
+            margin={{top: 20, right: 20, left: 10, bottom: 5}}>
         <XAxis dataKey="name"/>
         <YAxis/>
         <CartesianGrid strokeDasharray="3 3"/>

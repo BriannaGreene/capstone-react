@@ -24,15 +24,15 @@ const data02 = [
 const ScatterChartComp = () => {
   return (
     <div className="stackedbarchart-container">
-      <ScatterChart width={400} height={400} margin={{top: 20, right: 20, bottom: 20, left: 20}}>
+      <ScatterChart width={400} height={300} margin={{top: 20, right: 20, bottom: 20, left: 20}}>
       	<XAxis type="number" dataKey={'x'} name='stature' unit='day'/>
       	<YAxis type="number" dataKey={'y'} name='weight' unit='tickets'/>
         <ZAxis dataKey={'z'} range={[60, 400]} name='score' unit='day'/>
         <CartesianGrid />
       	<Tooltip cursor={{strokeDasharray: '3 3'}}/>
         <Legend/>
-      	<Scatter name='g62' data={data01} fill='#8884d8' shape="star"/>
-        <Scatter name='g68' data={data02} fill='#82ca9d' shape="triangle"/>
+      	<Scatter name='g62' data={data01} fill='purple' shape="star"/>
+        <Scatter name='g68' data={data02} fill='#0068b3' shape="triangle"/>
       </ScatterChart>
     </div>
   )

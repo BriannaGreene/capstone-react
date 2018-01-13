@@ -5,7 +5,7 @@ import ScatterChartComp from './ScatterChart'
 
 const Sprint = () => {
   return (
-    <div className="main-body">
+    <div id="sprint-body">
       <div className="sprint-body-top">
         <div className="graph-title-container">
           <span className="graph-title">Team: g62 - Hours Left for Capstone: 100</span>
