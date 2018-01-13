@@ -4,6 +4,19 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 #root { height: 100%; }
 .div { height: 100%; width: 100%; border: solid 1px black;}
 .container-fluid { display: flex; height: 100%; }
+.red { background-color: #ee355d; }
+.orange { background-color: #f87024; }
+.yellow { background-color: #ffc800; }
+.greene { background-color: #83ba33; }
+.aqua { background-color: #17a98d; }
+.darkblue { background-color: #0c3758; }
+.purple { background-color: purple; }
+
+
+.pink {
+  background-color: pink;
+}
+
 
 /****************** First Nav Section - left most sidebar ******************/
 #first-nav { background-color: #464646; width: 35px; padding: 30px 10px 10px 10px; }
@@ -269,17 +282,7 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   /* border: black solid 1px; */
 }
 
-.pink {
-  background-color: pink;
-}
 
-.red {
-  background-color: red;
-}
-
-.purple {
-  background-color: purple;
-}
 
 /*********************** Sprint Graphs Styling ************************/
 .sprint-body-top {
