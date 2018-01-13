@@ -13,11 +13,11 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchUser()
-    this.props.getTickets()
+    // this.props.getTickets()
     this.props.allUsers()
     // this.props.getWeather()
-    this.props.getMessages()
-    this.props.getStickies()
+    // this.props.getMessages()
+    // this.props.getStickies()
   }
 
 

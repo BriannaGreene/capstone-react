@@ -38,11 +38,14 @@ export const allUsers = () => {
 export const getTickets = () => {
   return async dispatch => {
     const response = await axios.get('/api/current_user')
-    let id = response.data[0].id
-    const res = await axios.get(
-      `${process.env.REACT_APP_API}/tickets/user/${id}`
-    )
-    dispatch({ type: GET_TICKETS, payload: res.data })
+    console.log('response from get tickets', response);
+    if (response.data[0] !== null) {
+      let id = response.data[0].id
+      const res = await axios.get(
+        `${process.env.REACT_APP_API}/tickets/user/${id}`
+      )
+      dispatch({ type: GET_TICKETS, payload: res.data })
+    }
   }
 }
 
