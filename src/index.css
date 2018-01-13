@@ -14,6 +14,7 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .darkblue { background-color: #0c3758; }
 .purple { background-color: purple; }
 .pink { background-color: #FD82CD; }
+#avatar01 { background-image: url('./images/avatar01.png'); }
 
 /***************************** Landing Page **********************************/
 .landing-container {
@@ -61,21 +62,21 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 
 /*********************** Main Body Content Styling ************************/
 #main-content { width: 90%; }
-.main-header { height: 50px; padding: 20px 0 20px 40px; background-color: #ffc800; display: flex; align-items: center; }
+.main-header { height: 50px; padding: 20px 0 20px 40px; background-color: #ededed; display: flex; align-items: center; }
 
 .main-heading { margin: 0 0 5px 0; font-size: 25px; color: #464646; }
 .main-sub-heading { font-weight: bold; font-size: 13px; color: #464646;  }
 
 .main-body {
-  /* border: solid 1px black; */
-  height: 95%;
+  border: solid 1px red;
+  height: 82vh;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   /* overflow: scroll; */
 }
 
-.main-body-top {
+/* .main-body-top {
   border: solid 1px black;
   height: 50%;
 }
@@ -84,7 +85,7 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   border: solid 1px black;
   height: 50%;
   margin-top: 20px;
-}
+} */
 .body-split { display: flex; flex-direction: row; }
 
 .body-left { width: 50%; padding-right: 10px;
@@ -96,37 +97,46 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 }
 
 /*********************** Dashboard Section Styling ************************/
+.dash-body {
+border: solid 1px red;
+height: 83vh;
+display: flex;
+flex-direction: column;
+padding: 20px;
+width: 73vw;
+/* overflow: scroll; */
+overflow-y: scroll;
+}
+
 .dash-body-top {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   height: 40%;
 }
 
 .dash-body-bottom {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   height: 60%;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  margin-top: 10px;
   /* overflow: auto; */
   overflow-y: scroll;
 }
 
 .today-weather-container {
   width: 30%;
-  height: 300px;
-  background-color: yellow;
+  height: 230px;
+  background-color: #ffc800;
   margin-right: 10px;
-  border: solid 1px #ebebeb;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
+  color: white;
 }
 
 .forecast-weather-container {
   width: 70%;
+  height: 250px;
   margin-left: 10px;
   border: solid 1px #ebebeb;
   border-radius: 10px;
@@ -137,8 +147,21 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   padding: 10px;
 }
 
+.forecast-weather-title {
+  font-weight: bold;
+}
+
+.forecast-icon {
+  background-image: url('./images/weather-partly-cloudy.png');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+}
+
 .weekly-forcast-container {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   width: 95%;
   height: 100%;
   display: flex;
@@ -153,15 +176,40 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   width: 50px;
 } */
 
+.sticky-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  justify-content: center;
+}
+
+.sticky-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.sticky-button {
+  height: 20px;
+  width: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  background-color: none;
+  background-color: Transparent;
+  opacity: 0.5;
+}
+
 .sticky {
   border: solid 1px black;
   margin: 10px;
   padding: 10px;
-  background-color: pink;
-  font-size: 20px;
+  background-color: yellow;
+  font-size: 18px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,6 +225,8 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
   font-family: inherit;
   word-wrap: break-word;
   word-break: break-all;
+  margin-top: 20px;
+  border: none;
 }
 
 

@@ -36,7 +36,9 @@ const Messages = ( state ) => {
     for (var i = 0; i < state.users.length; i++) {
       if (message.user_id == state.users[i].id) {
         name = `${state.users[i].first_name} ${state.users[i].last_name}`
-        avatar = avatars[state.users[i].avatar]
+        // avatar = avatars[state.users[i].avatar]
+        avatar = state.users[i].avatar
+
       }
     }
 

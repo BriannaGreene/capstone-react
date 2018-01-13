@@ -14,6 +14,7 @@ const DashboardNotes = ( state ) => {
   // let notes = state.users.filter(item => item.id === 1).map(user => user.sticky.notes)
 
 
+
   if (notes !== null) {
     console.log('NOTES')
     console.log(notes);
@@ -49,10 +50,9 @@ const DashboardNotes = ( state ) => {
 
   return (
     <div>
-      <div>
+      <div className="sticky-container">
         {eachSticky}
       </div>
-
     </div>
   )
 }

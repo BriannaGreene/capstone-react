@@ -5,6 +5,8 @@ import * as actions from '../../../../actions'
 const StickyNote = ({id, note, user_id, state}) => {
   console.log('STATE FROM STICKIES: ', state);
 
+
+
   // on click, send id to deleteMessage function
   const deleteNote = (e) => {
     e.preventDefault()
@@ -26,12 +28,10 @@ const StickyNote = ({id, note, user_id, state}) => {
   }
 
   return (
-    <div className="sticky" contenteditable>
+    <div className="sticky">
       <div className="sticky-header">
-        <button className="" onClick={createSticky}><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-        <button className="" onClick={deleteNote}><i className="fa fa-minus-circle" aria-hidden="true"></i></button>
-
-
+        <button className="sticky-button" onClick={createSticky}><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
+        <button className="sticky-button" onClick={deleteNote}><i className="fa fa-minus-circle fa-2x" aria-hidden="true"></i></button>
       </div>
       <div>
         {/* <ul>
