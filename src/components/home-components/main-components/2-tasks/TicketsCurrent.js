@@ -5,8 +5,13 @@ import Task from './Task'
 
 const TicketsCurrent = ( state ) => {
   let tickets = state.user_tickets
-  let inProgress = tickets.filter(item => item.status === "in progress")
-  let toDo = tickets.filter(item => item.status === "to do")
+  let inProgress = []
+  let toDo = []
+
+  if (tickets !== null) {
+    inProgress = tickets.filter(item => item.status === "in progress")
+    toDo = tickets.filter(item => item.status === "to do")
+  }
 
   const ticketsInProgress = inProgress.map(item => (
     <Task
@@ -18,7 +23,11 @@ const TicketsCurrent = ( state ) => {
       labels={item.labels}
       team={item.team}
       assignees={item.assignees}
+      hoursIn={item.hours_complete}
+      hoursOut={item.hours_to_complete}
       priority={item.priority}
+      state={state}
+
     />
   ))
 
@@ -32,15 +41,26 @@ const TicketsCurrent = ( state ) => {
       labels={item.labels}
       team={item.team}
       assignees={item.assignees}
+      hoursIn={item.hours_complete}
+      hoursOut={item.hours_to_complete}
       priority={item.priority}
+      state={state}
+
     />
   ))
+
+
+
+
 
   return (
       <div>
         <div className="ticket-title-holder">
           <div className="ticket-title-one">
             <span className="tickets-section-title">In Progress</span>
+          </div>
+          <div className="ticket-title-four">
+            <span className="tickets-section-title">Hours</span>
           </div>
           <div className="ticket-title-two">
             <span className="tickets-section-title">Assignees</span>
@@ -64,8 +84,8 @@ const TicketsCurrent = ( state ) => {
   )
 }
 
-function mapStateToProps({ user_tickets }) {
-  return { user_tickets }
+function mapStateToProps({ user_tickets, users }) {
+  return { user_tickets, users }
 }
 
 export default connect(mapStateToProps)(TicketsCurrent)

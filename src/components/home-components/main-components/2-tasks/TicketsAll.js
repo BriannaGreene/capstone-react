@@ -6,8 +6,9 @@ import Task from './Task'
 const TicketsAll = ( state ) => {
 
   let tickets = state.user_tickets
+  // let users = state.users
 
-  const ticketsAll = tickets.map(item => (
+  const ticketsAll = tickets.map(item => {
     <Task
       key={item.id}
       id={item.id}
@@ -17,9 +18,12 @@ const TicketsAll = ( state ) => {
       labels={item.labels}
       team={item.team}
       assignees={item.assignees}
+      hoursIn={item.hours_complete}
+      hoursOut={item.hours_to_complete}
       priority={item.priority}
+      state={state}
     />
-  ))
+  })
 
 
   return (
@@ -37,8 +41,8 @@ const TicketsAll = ( state ) => {
 
 }
 
-function mapStateToProps({ user_tickets }) {
-  return { user_tickets }
+function mapStateToProps({ user_tickets, users }) {
+  return { user_tickets, users }
 }
 
 export default connect(mapStateToProps)(TicketsAll)

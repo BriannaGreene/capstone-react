@@ -1,7 +1,8 @@
 import React from 'react'
-import Label from './Label'
 import { connect } from 'react-redux'
 import * as actions from '../../../../actions'
+import Label from './Label'
+import Assignees from './Assignees'
 
 const Task = ({
   id,
@@ -11,9 +12,13 @@ const Task = ({
   labels,
   team,
   assignees,
+  hoursIn,
+  hoursOut,
   priority,
+  state,
 }) => {
 
+  let key = 0
   let statusColor = 'grey'
 
   if (status === 'in progress') {
@@ -26,16 +31,23 @@ const Task = ({
 
   const renderLabels = labels.labels.map(name => (
     <Label
+      key={key}
       color={`label ${name}`}
     />
   ))
 
-
-
-  // const renderAssignees = assignees.assignees.map(person => {
-  //   console.log(person)
-  //   let personInfo = props.getUser()
-  // })
+  const renderAssignees = assignees.assignees.map(person => {
+    let initials = ''
+    for (var i = 0; i < state.users.length; i++) {
+      if (person === state.users[i].id) {
+        initials = `${state.users[i].first_name[0]}${state.users[i].last_name[0]}`
+      }
+    }
+    console.log(initials);
+    return (
+      <Assignees member={initials}/>
+    )
+  })
 
   return (
     <div className="ticket-container" draggable="true">
@@ -45,8 +57,11 @@ const Task = ({
         </div>
         <span className="ticket-title">{title}</span>
       </div>
+      <div className="ticket-hours-container">
+        {hoursIn} / {hoursOut}
+      </div>
       <div className="ticket-assignees-container">
-        assignees
+        {renderAssignees}
       </div>
       <div className="ticket-status-container">
         <div className="status" style={{'backgroundColor': statusColor}}>
