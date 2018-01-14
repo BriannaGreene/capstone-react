@@ -10,7 +10,8 @@ import {
   GET_STICKIES,
   NEW_STICKY,
   EDIT_STICKY,
-  DELETE_STICKY
+  DELETE_STICKY,
+  EDIT_HOURS
 } from './types'
 
 export const fetchUser = () => {
@@ -109,9 +110,20 @@ export const editSticky = (id, message) => {
 }
 
 export const deleteSticky = (id) => {
-  console.log('get note, find matching note, delete, or new table with ids');
   return async dispatch => {
     const res = await axios.delete(`${process.env.REACT_APP_API}/notes/${id}`, {id: id})
     dispatch({ type: DELETE_STICKY, payload: res.data })
+  }
+}
+
+export const editHours = (id, number, type) => {
+  console.log(id, number, type);
+  return async dispatch => {
+    const res = await axios.patch(`${process.env.REACT_APP_API}/tickets/${id}`, {
+      id: id,
+      type: number,
+    })
+    console.log('response from new sticky: ', res.data);
+    // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }

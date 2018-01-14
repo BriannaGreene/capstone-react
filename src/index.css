@@ -310,7 +310,7 @@ overflow-y: scroll;
 } */
 
 .ticket-hours-container {
-  width: 8%;
+  width: 10%;
   /* border: solid 1px black; */
   display: flex;
   align-items: center;
@@ -318,6 +318,19 @@ overflow-y: scroll;
   font-size: 20px;
   font-weight: bold;
   color: grey;
+
+}
+
+.ticket-hours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: grey;
+  border: none;
+  resize: none;
+  margin-left: 5px;
 }
 
 .ticket-block {
@@ -384,6 +397,19 @@ overflow-y: scroll;
   height: 32px;
   width: 32px;
   border-radius: 20px;
+}
+
+.member-holder {
+  /* border: solid 1px black; */
+  height: 32px;
+  width: 32px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
 }
 
 .labels-container {

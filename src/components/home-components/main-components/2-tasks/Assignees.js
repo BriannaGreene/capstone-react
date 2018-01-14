@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Assignees = ({ member }) => {
+const Assignees = ({ member, color }) => {
   return (
-    <div>
+    <div className={color}>
       {member}
     </div>
   )
