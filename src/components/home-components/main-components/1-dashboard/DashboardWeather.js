@@ -28,7 +28,16 @@ const DashboardWeather = () => {
 
         <div className="forecast-weather-container">
           <div className="weekly-forcast-container">
-            <WeatherChart />
+            <div className="forecast">
+              <div id="weather-icon-1">icon</div>
+              <div className="weather-text">text</div>
+            </div>
+            <div className="forecast"></div>
+            <div className="forecast"></div>
+            <div className="forecast"></div>
+            <div className="forecast"></div>
+            <div className="forecast"></div>
+            <div className="forecast"></div>
           </div>
         </div>
 

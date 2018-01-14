@@ -8,7 +8,7 @@ import TicketsAll from './TicketsAll'
 const Tasks = () => {
 
   return (
-    <div className="main-body">
+    <div className="task-body">
       <ul className="tasks-nav">
         <li><NavLink to="/tasks" className="tasks-nav-li">My Current Tasks</NavLink></li>
         <li>  |  </li>
