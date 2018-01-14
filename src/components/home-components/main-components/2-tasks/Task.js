@@ -14,6 +14,15 @@ const Task = ({
   priority,
 }) => {
 
+  let statusColor = 'grey'
+
+  if (status === 'in progress') {
+    statusColor = '#25A88D'
+  }
+  if (status === 'to do') {
+    statusColor = '#ee355d'
+  }
+
 
   const renderLabels = labels.labels.map(name => (
     <Label
@@ -21,21 +30,28 @@ const Task = ({
     />
   ))
 
+
+
   // const renderAssignees = assignees.assignees.map(person => {
   //   console.log(person)
   //   let personInfo = props.getUser()
   // })
 
   return (
-    <div className="ticket-container">
+    <div className="ticket-container" draggable="true">
       <div className="ticket-title-container">
         <div className="labels-container">
           {renderLabels}
         </div>
         <span className="ticket-title">{title}</span>
       </div>
-      <div className="ticket-assignees-container">assignees</div>
-      <div className="ticket-status-container">{status}</div>
+      <div className="ticket-assignees-container">
+        assignees
+      </div>
+      <div className="ticket-status-container">
+        <div className="status" style={{'backgroundColor': statusColor}}>
+        </div>
+      </div>
     </div>
   )
 }

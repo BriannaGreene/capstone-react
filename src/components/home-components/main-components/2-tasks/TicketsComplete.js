@@ -26,7 +26,7 @@ const TicketsComplete = ( state ) => {
         <div>
           <span className="tickets-section-title">Completed Tasks</span>
         </div>
-        <div>
+        <div className="ticket-block">
           { ticketsDone }
         </div>
       </div>

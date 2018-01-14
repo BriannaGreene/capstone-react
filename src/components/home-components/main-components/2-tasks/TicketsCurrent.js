@@ -38,16 +38,26 @@ const TicketsCurrent = ( state ) => {
 
   return (
       <div>
-        <div>
-          <span className="tickets-section-title">In Progress</span>
+        <div className="ticket-title-holder">
+          <div className="ticket-title-one">
+            <span className="tickets-section-title">In Progress</span>
+          </div>
+          <div className="ticket-title-two">
+            <span className="tickets-section-title">Assignees</span>
+          </div>
+          <div className="ticket-title-three">
+            <span className="tickets-section-title">Status</span>
+          </div>
         </div>
-        <div>
+
+
+        <div className="ticket-block">
           { ticketsInProgress }
         </div>
         <div>
           <span className="tickets-section-title">To Do</span>
         </div>
-        <div>
+        <div className="ticket-block">
           { ticketsToDo }
         </div>
       </div>

@@ -27,7 +27,7 @@ const TicketsAll = ( state ) => {
         <div>
           <span className="tickets-section-title">All Tasks</span>
         </div>
-        <div>
+        <div className="ticket-block">
           { ticketsAll }
         </div>
       </div>

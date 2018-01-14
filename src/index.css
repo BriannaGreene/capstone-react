@@ -16,6 +16,10 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .pink { background-color: #FD82CD; }
 #avatar01 { background-image: url('./images/avatar01.png'); }
 
+[draggable=true] {
+    cursor: move;
+}
+
 /***************************** Landing Page **********************************/
 .landing-container {
   height: 100%; width: 100%; display: flex;
@@ -268,13 +272,13 @@ overflow-y: scroll;
 
 .tasks-nav {
   padding: 0;
-  margin: 20px 0 20px 0;
+  margin: 0 0 20px 0;
   display: flex;
   list-style: none;
 }
 
 .tasks-nav-li {
-  margin: 20px 10px 5px 10px;
+  margin: 0 10px 5px 10px;
   font-weight: bold;
   text-decoration: none;
   color: #004dff;
@@ -282,12 +286,14 @@ overflow-y: scroll;
 }
 
 .ticket-container {
-  /* border: solid 1px black; */
-  width: 100%;
+  border: solid 1px grey;
+  /* width: 100%; */
   /* height: 50px; */
-  margin-top: 5px;
+  margin: 15px;
+  min-height: 40px;
   display: flex;
-  background-color: #dbdbdb;
+  background-color: white;
+  border-radius: 5px;
   padding: 5px 0 5px 5px;
 }
 
@@ -303,10 +309,42 @@ overflow-y: scroll;
   font-size: 15px;
 } */
 
+.ticket-block {
+  border: solid 1px #dbdbdb;
+  border-radius: 10px;
+  background-color: #dbdbdb;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
 .tickets-section-title {
   font-weight: bold;
   color: #464646;
   margin: 5px;
+}
+
+.ticket-title-holder {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ticket-title-one {
+  /* border: solid 1px black; */
+  width: 75%;
+}
+
+.ticket-title-two {
+  /* border: solid 1px black; */
+  width: 15%;
+
+}
+
+.ticket-title-three {
+  /* border: solid 1px black; */
+  width: 10%;
+
 }
 
 .ticket-assignees-container {
@@ -316,10 +354,19 @@ overflow-y: scroll;
 }
 
 .ticket-status-container {
-  border: solid 1px black;
+  /* border: solid 1px red; */
   width: 10%;
-  height: 100%;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.status {
+  /* border: solid 1px black; */
+  height: 32px;
+  width: 32px;
+  border-radius: 20px;
 }
 
 .labels-container {
