@@ -12,7 +12,6 @@ class Landing extends Component {
   // }
 
   render() {
-    console.log(this.props);
     return (
       <div className="landing-container">
         <div className="landing-left">

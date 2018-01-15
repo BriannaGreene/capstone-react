@@ -15,7 +15,6 @@ class Home extends Component {
   // }
 
   render() {
-    console.log('home page rendering');
     return (
       <div className="container-fluid">
         <FirstNav />

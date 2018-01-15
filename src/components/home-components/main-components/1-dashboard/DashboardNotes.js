@@ -9,17 +9,13 @@ const DashboardNotes = ( state ) => {
   let key = 0
   let eachSticky = null
   // state.getStickies(id)
-  console.log('notes from dashboardnotes: ', state)
   // CHANGE ID TO EQUAL ID INSTEAD OF 1
   // let notes = state.users.filter(item => item.id === 1).map(user => user.sticky.notes)
 
 
 
   if (notes !== null) {
-    console.log('NOTES')
-    console.log(notes);
     eachSticky = notes.map(note => {
-      console.log('each note coming in: ', note)
       key += 1
       return(
         <StickyNote

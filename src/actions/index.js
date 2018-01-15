@@ -38,9 +38,9 @@ export const allUsers = () => {
 
 export const getTickets = () => {
   return async dispatch => {
+    // const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
     const response = await axios.get('/api/current_user')
-    console.log('response from get tickets', response);
-    if (response.data[0] !== null) {
+    if (response.data[0] !== undefined) {
       let id = response.data[0].id
       const res = await axios.get(
         `${process.env.REACT_APP_API}/tickets/user/${id}`
@@ -53,7 +53,6 @@ export const getTickets = () => {
 export const getWeather = () => {
   return async dispatch => {
     const res = await axios.get(`${process.env.REACT_APP_API}/weather`)
-    console.log('darksky data: ', res)
     dispatch({ type: GET_WEATHER, payload: res.data })
   }
 }
@@ -77,10 +76,14 @@ export const composeMessage = (message, state) => {
 
 export const getStickies = () => {
   return async dispatch => {
+    // const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
     const response = await axios.get('/api/current_user')
-    let id = response.data[0].id
-    const res = await axios.get(`${process.env.REACT_APP_API}/notes/${id}`)
-    dispatch({ type: GET_STICKIES, payload: res.data})
+    if (response.data[0] !== undefined) {
+      let id = response.data[0].id
+      const res = await axios.get(`${process.env.REACT_APP_API}/notes/${id}`)
+      dispatch({ type: GET_STICKIES, payload: res.data})
+    }
+
   }
 }
 

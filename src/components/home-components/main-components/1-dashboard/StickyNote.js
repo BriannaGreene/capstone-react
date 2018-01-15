@@ -3,9 +3,6 @@ import { connect } from 'react-redux'
 import * as actions from '../../../../actions'
 
 const StickyNote = ({id, note, user_id, state}) => {
-  console.log('STATE FROM STICKIES: ', state);
-
-
 
   // on click, send id to deleteMessage function
   const deleteNote = (e) => {
@@ -30,7 +27,7 @@ const StickyNote = ({id, note, user_id, state}) => {
   return (
     <div className="sticky">
       <div className="sticky-header">
-        <button className="sticky-button" onClick={createSticky}><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
+        <button className="sticky-button" onClick={createSticky}><i className="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
         <button className="sticky-button" onClick={deleteNote}><i className="fa fa-minus-circle fa-2x" aria-hidden="true"></i></button>
       </div>
       <div>
@@ -38,7 +35,7 @@ const StickyNote = ({id, note, user_id, state}) => {
           <li>{note}</li>
         </ul> */}
         {/* <input className="input-note" type="text" wrap="soft" id="uname" name="name" placeholder={note}></input> */}
-        <textarea className="input-note" name="text" rows="14" cols="1" wrap="soft" onChange={updateSticky}>{note}</textarea>
+        <textarea className="input-note" name="text" rows="14" cols="1" wrap="soft" onChange={updateSticky} defaultValue={note}></textarea>
       </div>
     </div>
   )
