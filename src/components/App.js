@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
-// import { bindActionCreators } from 'redux'
-
 import Landing from './Landing'
 import Home from './Home'
+require('dotenv').config()
 // const API = process.env.REACT_APP_API
 
 

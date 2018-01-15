@@ -18,8 +18,7 @@ class Landing extends Component {
           <h1>Nimble.</h1>
           <h4>Ticket tracking for Nimble Teams</h4>
           <div>
-            <button><a href="http://localhost:5000/auth/google" onClick={this.props.fetchUser()}>Sign Up</a></button>
-            <button>Login</button>
+            <button><a href="http://localhost:5000/auth/google">Sign Up</a></button>
           </div>
         </div>
         <div className="landing-right">
