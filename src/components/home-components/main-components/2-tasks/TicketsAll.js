@@ -7,29 +7,46 @@ const TicketsAll = ( state ) => {
 
   let tickets = state.user_tickets
   // let users = state.users
+  console.log(tickets);
+  let ticketsAll = []
 
-  const ticketsAll = tickets.map(item => {
-    <Task
-      key={item.id}
-      id={item.id}
-      title={item.title}
-      description={item.description}
-      status={item.status}
-      labels={item.labels}
-      team={item.team}
-      assignees={item.assignees}
-      hoursIn={item.hours_complete}
-      hoursOut={item.hours_to_complete}
-      priority={item.priority}
-      state={state}
-    />
-  })
+  if (tickets !== null) {
+    ticketsAll = tickets.map(item => (
+      <Task
+        key={item.id}
+        id={item.id}
+        title={item.title}
+        description={item.description}
+        status={item.status}
+        labels={item.labels}
+        team={item.team}
+        assignees={item.assignees}
+        hoursIn={item.hours_complete}
+        hoursOut={item.hours_to_complete}
+        priority={item.priority}
+        state={state}
+      />
+      )
+    )
+  }
+
 
 
   return (
       <div>
-        <div>
-          <span className="tickets-section-title">All Tasks</span>
+        <div className="ticket-title-holder">
+          <div className="ticket-title-one">
+            <span className="tickets-section-title">All Tasks</span>
+          </div>
+          <div className="ticket-title-four">
+            <span className="tickets-section-title">Hours</span>
+          </div>
+          <div className="ticket-title-two">
+            <span className="tickets-section-title">Assignees</span>
+          </div>
+          <div className="ticket-title-three">
+            <span className="tickets-section-title">Status</span>
+          </div>
         </div>
         <div className="ticket-block">
           { ticketsAll }

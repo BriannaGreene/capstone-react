@@ -30,33 +30,31 @@ const Messages = ( state ) => {
     return false
   }
 
-  const eachMessage = messages.map(message => {
-    let name = ""
-    let avatar = 0
-    for (var i = 0; i < state.users.length; i++) {
-      if (message.user_id == state.users[i].id) {
-        name = `${state.users[i].first_name} ${state.users[i].last_name}`
-        // avatar = avatars[state.users[i].avatar]
-        avatar = state.users[i].avatar
-
+  let eachMessage = []
+  if (messages !== null) {
+    eachMessage = messages.map(message => {
+      let name = ""
+      let avatar = 0
+      for (var i = 0; i < state.users.length; i++) {
+        if (message.user_id == state.users[i].id) {
+          name = `${state.users[i].first_name} ${state.users[i].last_name}`
+          avatar = state.users[i].avatar
+        }
       }
-    }
+      return(
+        <Message
+          key={message.id}
+          id={message.id}
+          user={name}
+          message={message.message}
+          time={message.created_at}
+          avatar={avatar}
+          state={state}
+        />
+      )
+    })
+  }
 
-    return(
-      <Message
-        key={message.id}
-        id={message.id}
-        // user={message.user_id}
-        user={name}
-
-        message={message.message}
-        time={message.created_at}
-        avatar={avatar}
-        state={state}
-      />
-    )
-
-  })
 
   return (
     <div id="message-body">

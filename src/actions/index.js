@@ -66,11 +66,17 @@ export const getMessages = () => {
 
 export const composeMessage = (message, state) => {
   return async dispatch => {
+
     const res = await axios.post(`${process.env.REACT_APP_API}/messages`, {
       userId: message.userId,
       message: message.message
     })
-    dispatch({ type: COMPOSE_MESSAGE, payload: res.data })
+
+    const response = await axios.get(`${process.env.REACT_APP_API}/messages`)
+    console.log('RESPONSE OF ALL MESSAGES: ', response.data);
+    let newMessages = [...response.data, res.data]
+    console.log('NEW MESSAGES ARRAY VARIABLE: ', newMessages);
+    dispatch({ type: COMPOSE_MESSAGE, payload: newMessages })
   }
 }
 
