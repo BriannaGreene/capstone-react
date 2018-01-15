@@ -1,13 +1,13 @@
 {
-  "name": "capstone-react-practice",
+  "name": "nimble-react",
   "version": "0.1.0",
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "http://localhost:5000"
+      "target": "https://nimble-api.herokuapp.com"
     },
     "/api/*": {
-      "target": "http://localhost:5000"
+      "target": "https://nimble-api.herokuapp.com"
     }
   },
   "dependencies": {
@@ -26,6 +26,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "devServer": {
+        "compress": true,
+        "disableHostCheck": true,
+     },
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
