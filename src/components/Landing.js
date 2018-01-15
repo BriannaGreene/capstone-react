@@ -15,11 +15,11 @@ class Landing extends Component {
     return (
       <div className="landing-container">
         <div className="landing-left">
-          <h1>Nimble.</h1>
-          <h4>Ticket tracking for Nimble Teams</h4>
-          <div>
-            <button><a href="http://localhost:5000/api/current_user">Current User</a></button>
-            <button><a href="http://localhost:5000/auth/google">Auth Sign Up</a></button>
+          <h1 id="nimble-title">Nimble.</h1>
+          <span id="nimble-subtitle"></span>
+          <div id="landing-button-container">
+            <span>Sign in with Google</span>
+            <button id="login-button"><a href="http://localhost:5000/auth/google">GET STARTED</a></button>
           </div>
         </div>
         <div className="landing-right">
