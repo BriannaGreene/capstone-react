@@ -83,8 +83,9 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 
 /*********************** Main Body Content Styling ************************/
 #main-content { width: 90%; }
+#header-container { width: 96%; }
+#header01 { display: flex; justify-content: space-between; }
 .main-header { height: 50px; padding: 20px 0 20px 40px; background-color: #ededed; display: flex; align-items: center; }
-
 .main-heading { margin: 0 0 5px 0; font-size: 25px; color: #464646; }
 .main-sub-heading { font-weight: bold; font-size: 13px; color: #464646;  }
 

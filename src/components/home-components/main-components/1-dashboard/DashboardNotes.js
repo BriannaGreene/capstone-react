@@ -1,56 +1,57 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../../actions'
 import StickyNote from './StickyNote'
 
-const DashboardNotes = ( state ) => {
-  // let id = state.auth.id
-  let notes = state.stickies
-  let key = 0
-  let eachSticky = null
-  // state.getStickies(id)
-  // CHANGE ID TO EQUAL ID INSTEAD OF 1
-  // let notes = state.users.filter(item => item.id === 1).map(user => user.sticky.notes)
+class DashboardNotes extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      key: 0,
+      eachSticky: [],
+      notes: []
+    }
+  }
 
+  componentDidMount() {
+    console.log('stickies from dash notes.... ', this.props);
+    if (this.props.stickies !== null) {
+      this.setState({ notes: this.props.stickies })
+    }
+  }
 
-  if (notes !== null) {
-    eachSticky = notes.map(note => {
-      key += 1
-      return(
-        <StickyNote
-          key={note.id}
-          id={note.id}
-          note={note.note}
-          user_id={note.user_id}
-          state={state}
-        />
-      )
-    })
+  createSticky(e){
+    e.preventDefault()
+    this.props.newSticky(this.props.auth.id)
+    window.location.href = '/'
   }
 
 
-  // const postMessage = (e) => {
-  //   e.preventDefault()
-  //   state.composeMessage({
-  //     userId: user,
-  //     message: e.target.message.value,
-  //     state: messages
-  //   })
-  //   var frm = document.getElementsByName('message-form')[0]
-  //   frm.reset()
-  //   return false
-  // }
-
-
-
-  return (
-    <div>
-      <div className="sticky-container">
-        {eachSticky}
+  render() {
+    console.log('PROPS FROM DASH NOTES: ', this.state);
+    return (
+      <div>
+        <div className="sticky-container">
+          { this.props.stickies === null ? console.log('HEYEHEYHEY!!') :
+            this.props.stickies.map(note => {
+              this.key += 1
+              return(
+                <StickyNote
+                  key={note.id}
+                  id={note.id}
+                  note={note.note}
+                  user_id={note.user_id}
+                  state={this.props}
+                  createSticky={this.createSticky.bind(this)}
+                />
+              )
+            })}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
+
 }
 
 function mapStateToProps({ users, auth, stickies }) {

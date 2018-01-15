@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../../actions'
 
-const StickyNote = ({id, note, user_id, state}) => {
+const StickyNote = ({id, note, user_id, state, createSticky}) => {
 
   // on click, send id to deleteMessage function
   const deleteNote = (e) => {
@@ -12,10 +12,10 @@ const StickyNote = ({id, note, user_id, state}) => {
     state.deleteSticky(id)
   }
 
-  const createSticky = (e) => {
-    e.preventDefault()
-    state.newSticky(user_id)
-  }
+  // const createSticky = (e) => {
+  //   e.preventDefault()
+  //   state.newSticky(user_id)
+  // }
 
   const updateSticky = (e) => {
     e.preventDefault()

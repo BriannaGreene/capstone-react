@@ -6,9 +6,9 @@ class Header01 extends Component {
 
   render() {
     return (
-      <div>
+      <div id="header01">
         <h2 className="main-heading">Hello, {this.props.auth.first_name} !</h2>
-        <button id="logout-button"><a>LOGOUT</a></button>
+        <button id="logout-button"><a href="http://localhost:5000/api/logout">LOGOUT</a></button>
       </div>
     )
 

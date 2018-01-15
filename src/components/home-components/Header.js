@@ -10,7 +10,7 @@ import Header06 from './main-components/0-header/Header06'
 
 const Header = () => {
   return (
-    <div>
+    <div id="header-container">
       <Switch>
         <Route exact path="/" component={Header01} />
         <Route path="/tasks" component={Header02} />
