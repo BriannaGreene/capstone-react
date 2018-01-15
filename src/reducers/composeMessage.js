@@ -4,8 +4,9 @@ export default function(state = null, action) {
   switch (action.type) {
     case COMPOSE_MESSAGE:
       console.log('payload from compose: ', action.payload)
-      return
-      action.payload || null
+      console.log('state from compose: ', state);
+      // return
+      // action.payload || null
     default:
       return state || null
   }

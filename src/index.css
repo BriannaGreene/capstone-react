@@ -118,7 +118,16 @@ width: 72vw;
 overflow-y: scroll;
 }
 
-.dash-body-split { display: flex; flex-direction: row; justify-content: space-between; }
+.dash-body-split { display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* border: solid 1px black; */
+}
+
+.dash-body-left {
+  /* border: solid 1px black; */
+  width: 30%;
+}
 
 .dash-body-top {
   /* border: solid 1px black; */
@@ -140,6 +149,7 @@ overflow-y: scroll;
   font-size: 20px;
   color: #464646;
   padding-bottom: 10px;
+  /* width: 100%; */
 }
 
 .today-weather-container {
@@ -151,9 +161,9 @@ overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   color: white;
-
+  /* width: 90%; */
   border: solid 1px #dbdbdb;
   /* background-color: #fff; */
   justify-content: center;
@@ -169,7 +179,8 @@ overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0 20px 0;
+  /* padding: 20px 0 20px 0; */
+  /* width: 100%; */
 }
 
 .forecast-weather-title {
@@ -180,8 +191,8 @@ overflow-y: scroll;
   background-image: url('./images/weather/clear.png');
   background-size: cover;
   background-position: center;
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
   margin: 0 20px 20px 20px;
   /* border: solid 1px black; */
 
@@ -201,7 +212,7 @@ overflow-y: scroll;
   /* border: solid 1px black; */
   border: solid 1px #dbdbdb;
   border-radius: 10px;
-  width: 70px;
+  /* width: 70px; */
   /* background-color: #8bd9f0; */
   height: 170px;
   border-radius: 10px;
@@ -222,8 +233,8 @@ overflow-y: scroll;
   background-color: blue; */
   width: 60px;
   height: 60px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .sticky-container {

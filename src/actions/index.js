@@ -76,6 +76,7 @@ export const composeMessage = (message, state) => {
     console.log('RESPONSE OF ALL MESSAGES: ', response.data);
     let newMessages = [...response.data, res.data]
     console.log('NEW MESSAGES ARRAY VARIABLE: ', newMessages);
+    getMessages()
     dispatch({ type: COMPOSE_MESSAGE, payload: newMessages })
   }
 }

@@ -4,7 +4,7 @@ import WeatherChart from './WeatherChart'
 const DashboardWeather = () => {
   return (
     <div className="dash-body-split">
-      <div >
+      <div className="dash-body-left" >
         <div className="graph-title-container">
           <span className="dash-title">Today In Boulder</span>
         </div>
