@@ -25,9 +25,11 @@ const Messages = ( state ) => {
       message: e.target.message.value,
       state: messages
     })
+    window.location.href = '/messages'
     var frm = document.getElementsByName('message-form')[0]
     frm.reset()
     return false
+
   }
 
   let eachMessage = []

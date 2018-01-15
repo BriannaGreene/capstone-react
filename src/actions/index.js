@@ -21,7 +21,7 @@ export const fetchUser = () => {
     // console.log('RESPONSE ON FETUSER: ', res.data);
     const res = await axios.get('/api/current_user')
     // const res = await axios.get('http://localhost:5000/api/current_user')
-
+    console.log('RES FROM FETCH: ', res);
     dispatch({ type: FETCH_USER, payload: res.data[0] })
   }
 }
@@ -42,8 +42,8 @@ export const allUsers = () => {
 
 export const getTickets = () => {
   return async dispatch => {
-    const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    // const response = await axios.get('/api/current_user')
+    // const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
+    const response = await axios.get('/api/current_user')
     if (response.data[0] !== undefined) {
       let id = response.data[0].id
       const res = await axios.get(
@@ -87,8 +87,8 @@ export const composeMessage = (message, state) => {
 
 export const getStickies = () => {
   return async dispatch => {
-    const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    // const response = await axios.get('/api/current_user')
+    // const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
+    const response = await axios.get('/api/current_user')
     if (response.data[0] !== undefined) {
       let id = response.data[0].id
       const res = await axios.get(`${process.env.REACT_APP_API}/notes/${id}`)

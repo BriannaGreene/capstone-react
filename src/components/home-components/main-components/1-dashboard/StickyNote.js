@@ -10,6 +10,7 @@ const StickyNote = ({id, note, user_id, state, createSticky}) => {
     console.log('event', e);
     console.log('note', note);
     state.deleteSticky(id)
+    window.location.href = '/'
   }
 
   // const createSticky = (e) => {

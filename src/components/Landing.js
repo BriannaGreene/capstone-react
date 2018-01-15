@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
-let API = process.env.REACT_APP_API
+let link = `${process.env.REACT_APP_API}/auth/google`
 
 class Landing extends Component {
 
@@ -18,7 +18,8 @@ class Landing extends Component {
           <h1>Nimble.</h1>
           <h4>Ticket tracking for Nimble Teams</h4>
           <div>
-            <button><a href="http://localhost:5000/auth/google">Sign Up</a></button>
+            <button><a href="http://localhost:5000/api/current_user">Current User</a></button>
+            <button><a href="http://localhost:5000/auth/google">Auth Sign Up</a></button>
           </div>
         </div>
         <div className="landing-right">

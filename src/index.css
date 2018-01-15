@@ -2,7 +2,7 @@
 html { height: 100%; }
 body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0; font-family: sans-serif; }
 #root { height: 100%; }
-.div { height: 100%; width: 100%; border: solid 1px black;}
+.div { height: 100%; width: 100%; }
 .container-fluid { display: flex; height: 100%; }
 .red { background-color: #ee355d; }
 .orange { background-color: #f87024; }
@@ -90,7 +90,6 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .main-sub-heading { font-weight: bold; font-size: 13px; color: #464646;  }
 
 .main-body {
-  border: solid 1px red;
   height: 82vh;
   display: flex;
   flex-direction: column;
@@ -101,11 +100,9 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .body-split { display: flex; flex-direction: row; }
 
 .body-left { width: 50%; padding-right: 10px;
-  border: solid 1px black;
 }
 
 .body-right { width: 50%; padding-left: 10px;
-  border: solid 1px black;
 }
 
 /*********************** Dashboard Section Styling ************************/
@@ -122,16 +119,13 @@ overflow-y: scroll;
 .dash-body-split { display: flex;
   flex-direction: row;
   width: 100%;
-  /* border: solid 1px black; */
 }
 
 .dash-body-left {
-  /* border: solid 1px black; */
   width: 30%;
 }
 
 .dash-body-top {
-  /* border: solid 1px black; */
   height: 40%;
 }
 
@@ -195,12 +189,9 @@ overflow-y: scroll;
   width: 150px;
   height: 150px;
   margin: 0 20px 20px 20px;
-  /* border: solid 1px black; */
-
 }
 
 .weekly-forcast-container {
-  /* border: solid 1px black; */
   width: 700px;
   height: 100%;
   display: flex;
@@ -210,11 +201,8 @@ overflow-y: scroll;
 }
 
 .forecast {
-  /* border: solid 1px black; */
   border: solid 1px #dbdbdb;
   border-radius: 10px;
-  /* width: 70px; */
-  /* background-color: #8bd9f0; */
   height: 170px;
   border-radius: 10px;
   display: flex;
@@ -225,17 +213,14 @@ overflow-y: scroll;
 }
 
 .weather-text {
-  /* border: solid 1px black; */
   color: grey;
 }
 
 #weather-icon-1 {
-  /* border: solid 1px black;
-  background-color: blue; */
+
   width: 60px;
   height: 60px;
   margin: 15px;
-  /* margin-bottom: 15px; */
 }
 
 .sticky-container {
@@ -260,15 +245,15 @@ overflow-y: scroll;
   justify-content: center;
   background-color: none;
   background-color: Transparent;
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .sticky {
-  border: solid 1px black;
+  border: solid 1px grey;
   margin: 10px;
   padding: 10px;
-  background-color: yellow;
-  font-size: 18px;
+  background-color: pink;
+  font-size: 20px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   width: 190px;
   height: 150px;
@@ -276,6 +261,7 @@ overflow-y: scroll;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 
@@ -287,15 +273,15 @@ overflow-y: scroll;
   font-family: inherit;
   word-wrap: break-word;
   word-break: break-all;
-  margin-top: 20px;
+  margin-top: 30px;
   border: none;
+  color: purple;
 }
 
 
 
 /*********************** Tasks Section Styling ************************/
 .task-body {
-/* border: solid 1px red; */
 height: 82vh;
 display: flex;
 flex-direction: column;
@@ -333,7 +319,6 @@ overflow-y: scroll;
 }
 
 .ticket-title-container {
-  /* border: solid 1px black; */
   width: 75%;
   height: 100%;
   /* padding: 10px; */
@@ -346,7 +331,6 @@ overflow-y: scroll;
 
 .ticket-hours-container {
   width: 10%;
-  /* border: solid 1px black; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,18 +374,15 @@ overflow-y: scroll;
 }
 
 .ticket-title-one {
-  /* border: solid 1px black; */
   width: 75%;
 }
 
 .ticket-title-two {
-  /* border: solid 1px black; */
   width: 15%;
 
 }
 
 .ticket-title-three {
-  /* border: solid 1px black; */
   width: 10%;
 }
 
@@ -410,7 +391,6 @@ overflow-y: scroll;
 }
 
 .ticket-assignees-container {
-  /* border: solid 1px black; */
   width: 18%;
   height: 40px;
   display: flex;
@@ -419,7 +399,6 @@ overflow-y: scroll;
 }
 
 .ticket-status-container {
-  /* border: solid 1px red; */
   width: 10%;
   /* height: 100%; */
   display: flex;
@@ -428,14 +407,12 @@ overflow-y: scroll;
 }
 
 .status {
-  /* border: solid 1px black; */
   height: 32px;
   width: 32px;
   border-radius: 20px;
 }
 
 .member-holder {
-  /* border: solid 1px black; */
   height: 32px;
   width: 32px;
   border-radius: 20px;
@@ -448,7 +425,6 @@ overflow-y: scroll;
 }
 
 .labels-container {
-  /* border: solid 1px black; */
   /* height: 10px; */
   min-width: 20px;
   display: flex;
@@ -460,7 +436,6 @@ overflow-y: scroll;
   height: 8px;
   margin-right: 5px;
   border-radius: 10px;
-  /* border: black solid 1px; */
 }
 
 
