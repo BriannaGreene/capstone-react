@@ -20,8 +20,8 @@ import {
 
 export const fetchUser = () => {
   return async dispatch => {
-    // const res = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    const res = await axios.get('/api/current_user')
+    const res = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
+    // const res = await axios.get('/api/current_user')
     dispatch({ type: FETCH_USER, payload: res.data[0] })
   }
 }
@@ -42,8 +42,8 @@ export const allUsers = () => {
 
 export const getTickets = () => {
   return async dispatch => {
-    // const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    const response = await axios.get('/api/current_user')
+    const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
+    // const response = await axios.get('/api/current_user')
     if (response.data[0] !== undefined) {
       let id = response.data[0].id
       const res = await axios.get(
@@ -82,14 +82,13 @@ export const composeMessage = (message, state) => {
 
 export const getStickies = () => {
   return async dispatch => {
-    // const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    const response = await axios.get('/api/current_user')
+    const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
+    // const response = await axios.get('/api/current_user')
     if (response.data[0] !== undefined) {
       let id = response.data[0].id
       const res = await axios.get(`${process.env.REACT_APP_API}/notes/${id}`)
       dispatch({ type: GET_STICKIES, payload: res.data})
     }
-
   }
 }
 
