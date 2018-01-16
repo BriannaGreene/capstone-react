@@ -1,102 +1,140 @@
 import React from 'react'
-import WeatherChart from './WeatherChart'
+import { connect } from 'react-redux'
+import * as actions from '../../../../actions'
 
-const DashboardWeather = () => {
+const DashboardWeather = ( state ) => {
+
+  console.log('THIS PROPS FROM DASH WEATHER: ', state.weather);
+  let currentSummary = ''
+  let currentTemp = ''
+  let day1high = ''
+  let day1low = ''
+  let day2high = ''
+  let day2low = ''
+  let day3high = ''
+  let day3low = ''
+  let day4high = ''
+  let day4low = ''
+  let day5high = ''
+  let day5low = ''
+  let day6high = ''
+  let day6low = ''
+  let day7high = ''
+  let day7low = ''
+  let class1 = ''
+  let class2 = ''
+  let class3 = ''
+  let class4 = ''
+  let class5 = ''
+  let class6 = ''
+  let class7 = ''
+
+  let possibleIcons = ["clear-day", "clear-night", "sleet", "fog", "cloudy", "partly-cloudy-day", "partly-cloudy-night", "snow", "wind", "rain", "hail", "thunderstorm"]
+
+  if (state.weather !== null) {
+    currentSummary = state.weather.currentSummary
+    currentTemp = Math.round(state.weather.currentTemperature)
+    day1high = Math.round(state.weather.daily1TempHigh)
+    day1low = Math.round(state.weather.daily1TempLow)
+    day2high = Math.round(state.weather.daily2TempHigh)
+    day2low = Math.round(state.weather.daily2TempLow)
+    day3high = Math.round(state.weather.daily3TempHigh)
+    day3low = Math.round(state.weather.daily3TempLow)
+    day4high = Math.round(state.weather.daily4TempHigh)
+    day4low = Math.round(state.weather.daily4TempLow)
+    day5high = Math.round(state.weather.daily5TempHigh)
+    day5low = Math.round(state.weather.daily5TempLow)
+    day6high = Math.round(state.weather.daily6TempHigh)
+    day6low = Math.round(state.weather.daily6TempLow)
+    day7high = Math.round(state.weather.daily7TempHigh)
+    day7low = Math.round(state.weather.daily7TempLow)
+
+    for (var i = 0; i < possibleIcons.length; i++) {
+      if (state.weather.daily1Icon === possibleIcons[i]) { class1 = possibleIcons[i] }
+      if (state.weather.daily2Icon === possibleIcons[i]) { class2 = possibleIcons[i] }
+      if (state.weather.daily3Icon === possibleIcons[i]) { class3 = possibleIcons[i] }
+      if (state.weather.daily4Icon === possibleIcons[i]) { class4 = possibleIcons[i] }
+      if (state.weather.daily5Icon === possibleIcons[i]) { class5 = possibleIcons[i] }
+      if (state.weather.daily6Icon === possibleIcons[i]) { class6 = possibleIcons[i] }
+      if (state.weather.daily7Icon === possibleIcons[i]) { class7 = possibleIcons[i] }
+    }
+  }
+
+
+  console.log('CLASS ONE: ', class1);
+
+
   return (
     <div className="dash-body-split">
       <div className="dash-body-left" >
         <div className="graph-title-container">
           <span className="dash-title">Today In Boulder</span>
         </div>
-
         <div>
           <div className="today-weather-container">
             <div className="forecast-icon"></div>
             <div>
-              <span className="forecast-weather-title">CLEAR / 53</span>
+              <span className="forecast-weather-title">{currentSummary} / {currentTemp}</span>
             </div>
           </div>
         </div>
-
       </div>
-
-
       <div>
         <div className="graph-title-container">
           <span className="dash-title">Weekly Weather Forecast</span>
         </div>
-
         <div className="forecast-weather-container">
           <div className="weekly-forcast-container">
             <div className="forecast">
-              <div className="weather-text">THU</div>
-              <div id="weather-icon-1" className="partly-cloudy"></div>
-              <div className="weather-text">61</div>
+              <div className="weather-text">{day1high}</div>
+              <div id="weather-icon-1" className={class1}></div>
+              <div className="weather-text">{day1low}</div>
             </div>
             <div className="forecast">
-              <div className="weather-text">FRI</div>
-              <div id="weather-icon-1" className="partly-cloudy"></div>
-              <div className="weather-text">62</div>
+              <div className="weather-text">{day2high}</div>
+              <div id="weather-icon-1" className={class2}></div>
+              <div className="weather-text">{day2low}</div>
             </div>
             <div className="forecast">
-              <div className="weather-text">SAT</div>
-              <div id="weather-icon-1" className="snowy"></div>
-              <div className="weather-text">35</div>
+              <div className="weather-text">{day3high}</div>
+              <div id="weather-icon-1" className={class3}></div>
+              <div className="weather-text">{day3low}</div>
             </div>
             <div className="forecast">
-              <div className="weather-text">SUN</div>
-              <div id="weather-icon-1" className="snowy-showers"></div>
-              <div className="weather-text">37</div>
+              <div className="weather-text">{day4high}</div>
+              <div id="weather-icon-1" className={class4}></div>
+              <div className="weather-text">{day4low}</div>
             </div>
             <div className="forecast">
-              <div className="weather-text">MON</div>
-              <div id="weather-icon-1" className="snowy-showers"></div>
-              <div className="weather-text">44</div>
+              <div className="weather-text">{day5high}</div>
+              <div id="weather-icon-1" className=
+                {class5}></div>
+              <div className="weather-text">{day5low}</div>
             </div>
             <div className="forecast">
-              <div className="weather-text">TUE</div>
-              <div id="weather-icon-1" className="snowy"></div>
-              <div className="weather-text">43</div>
+              <div className="weather-text">{day6high}</div>
+              <div id="weather-icon-1" className={class6}></div>
+              <div className="weather-text">{day6low}</div>
             </div>
             <div className="forecast">
-              <div className="weather-text">WED</div>
-              <div id="weather-icon-1" className="snowy"></div>
-              <div className="weather-text">41</div>
+              <div className="weather-text">{day7high}</div>
+              <div id="weather-icon-1" className={class7}></div>
+              <div className="weather-text">{day7low}</div>
             </div>
           </div>
         </div>
 
       </div>
-
-
-
-
-
-{/*
-      <div className="today-weather-container">
-        <div>
-          <span className="forecast-weather-title">TODAY IN BOULDER</span>
-        </div>
-        <div className="forecast-icon">
-
-        </div>
-        <div>
-          <span className="forecast-weather-title">PARTLY CLOUDY / 49</span>
-        </div>
-      </div>
-
-      <div className="forecast-weather-container">
-        <div>
-          <span className="tickets-section-title">THIS WEEK'S WEATHER FOR DENVER</span>
-        </div>
-        <div className="weekly-forcast-container">
-          <WeatherChart />
-        </div>
-      </div> */}
 
     </div>
 
   )
 }
 
-export default DashboardWeather
+
+function mapStateToProps({ weather, auth, users }) {
+  return { weather, auth, users }
+}
+
+
+export default connect(mapStateToProps)(DashboardWeather)

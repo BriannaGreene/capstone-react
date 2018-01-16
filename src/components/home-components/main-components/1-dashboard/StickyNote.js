@@ -2,8 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../../actions'
 
-const StickyNote = ({id, note, user_id, state, createSticky}) => {
-
+const StickyNote = ({id, note, user_id, state, createSticky, color}) => {
   // on click, send id to deleteMessage function
   const deleteNote = (e) => {
     e.preventDefault()
@@ -26,7 +25,7 @@ const StickyNote = ({id, note, user_id, state, createSticky}) => {
   }
 
   return (
-    <div className="sticky">
+    <div id="sticky">
       <div className="sticky-header">
         <button className="sticky-button" onClick={createSticky}><i className="fa fa-plus-circle fa-2x" aria-hidden="true"></i></button>
         <button className="sticky-button" onClick={deleteNote}><i className="fa fa-minus-circle fa-2x" aria-hidden="true"></i></button>

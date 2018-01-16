@@ -10,16 +10,18 @@ class DashboardNotes extends Component {
     this.state = {
       key: 0,
       eachSticky: [],
-      notes: []
+      notes: [],
+      colors: ["red", "orange", "yellow", "greene", "aqua", "blue", "midblue", "pink"],
+      colorClass: "red"
     }
   }
 
-  componentDidMount() {
-    console.log('stickies from dash notes.... ', this.props);
-    if (this.props.stickies !== null) {
-      this.setState({ notes: this.props.stickies })
-    }
-  }
+  // componentDidMount() {
+  //   console.log('stickies from dash notes.... ', this.props);
+  //   if (this.props.stickies !== null) {
+  //     this.setState({ notes: this.props.stickies })
+  //   }
+  // }
 
   createSticky(e){
     e.preventDefault()
@@ -27,13 +29,18 @@ class DashboardNotes extends Component {
     window.location.href = '/'
   }
 
+  // getRandomColor() {
+  //   let randomColor = this.props.colors[Math.floor(Math.random() * 8)]
+  //   console.log(randomColor);
+  // }
+
 
   render() {
-    console.log('PROPS FROM DASH NOTES: ', this.state);
+    console.log('PROPS FROM DASH NOTES: ', this.props);
     return (
       <div>
         <div className="sticky-container">
-          { this.props.stickies === null ? console.log('HEYEHEYHEY!!') :
+          { this.props.stickies !== null ? console.log('HEYEHEYHEY!!') :
             this.props.stickies.map(note => {
               this.key += 1
               return(
