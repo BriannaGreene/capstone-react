@@ -1,23 +1,19 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 
-
 class SecondNav extends Component {
   render() {
     return (
       <div id="second-nav">
         <div id="nav-link-holder">
-
           <div id="nav-item-header">
             <div id="avatar-icon">
-
             </div>
             <div id="nav-header-text">
               <h2 id="project-teamname">Team g62</h2>
               <span id="project-subtitle">CAPSTONE PRESENTATIONS</span>
             </div>
           </div>
-
           <div className="nav-item-box">
             <div className="nav-icon">
               <NavLink to="/">
@@ -78,12 +74,10 @@ class SecondNav extends Component {
               <NavLink to="/messages" className="second-text">Messages</NavLink>
             </div>
           </div>
-
         </div>
       </div>
     )
   }
 }
-
 
 export default SecondNav

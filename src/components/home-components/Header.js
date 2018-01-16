@@ -7,7 +7,6 @@ import Header04 from './main-components/0-header/Header04'
 import Header05 from './main-components/0-header/Header05'
 import Header06 from './main-components/0-header/Header06'
 
-
 const Header = () => {
   return (
     <div id="header-container">

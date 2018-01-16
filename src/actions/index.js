@@ -20,12 +20,8 @@ import {
 
 export const fetchUser = () => {
   return async dispatch => {
-    // console.log('ROUTE ON FET USER: ', `${process.env.REACT_APP_API}/api/current_user`);
     // const res = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    // console.log('RESPONSE ON FETUSER: ', res.data);
     const res = await axios.get('/api/current_user')
-    // const res = await axios.get('http://localhost:5000/api/current_user')
-    console.log('RES FROM FETCH: ', res);
     dispatch({ type: FETCH_USER, payload: res.data[0] })
   }
 }
@@ -74,17 +70,12 @@ export const getMessages = () => {
 
 export const composeMessage = (message, state) => {
   return async dispatch => {
-
     const res = await axios.post(`${process.env.REACT_APP_API}/messages`, {
       userId: message.userId,
       message: message.message
     })
-
     const response = await axios.get(`${process.env.REACT_APP_API}/messages`)
-    console.log('RESPONSE OF ALL MESSAGES: ', response.data);
     let newMessages = [...response.data, res.data]
-    console.log('NEW MESSAGES ARRAY VARIABLE: ', newMessages);
-    getMessages()
     dispatch({ type: COMPOSE_MESSAGE, payload: newMessages })
   }
 }
@@ -103,26 +94,21 @@ export const getStickies = () => {
 }
 
 export const newSticky = (id) => {
-  console.log('post a new sticky with empty string');
-  console.log('send user id along:', id);
   return async dispatch => {
     const res = await axios.post(`${process.env.REACT_APP_API}/notes`, {
       note: "",
       userId: id
     })
-    console.log('response from new sticky: ', res.data);
     dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }
 
 export const editSticky = (id, message) => {
-  console.log('patch sticky... how do you patch with no id.. maybe need new table of stickys', id, message);
   return async dispatch => {
     const res = await axios.patch(`${process.env.REACT_APP_API}/notes/${id}`, {
       id: id,
       note: message
     })
-    console.log('response from new sticky: ', res.data);
     // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }
@@ -140,7 +126,6 @@ export const editHoursIn = (id, number) => {
       id: id,
       hoursComplete: number,
     })
-    console.log('response from edit hours in: ', res.data);
     dispatch({ type: EDIT_HOURS_IN, payload: res.data })
   }
 }
@@ -151,21 +136,17 @@ export const editHoursOut = (id, number) => {
       id: id,
       hoursToComplete: number,
     })
-    console.log('response from edit hours in: ', res.data);
     // dispatch({ type: EDIT_HOURS_IN, payload: res.data })
   }
 }
 
 export const newTask = (team, title, assignees) => {
-  console.log('team in new task: ', team);
   return async dispatch => {
     const res = await axios.post(`${process.env.REACT_APP_API}/tickets`, {
       team: team,
       title: title,
       assignees: assignees,
-      // prioity: 1
     })
-    console.log('res from new task: ', res);
   }
 }
 
@@ -175,7 +156,6 @@ export const updateTitle = (id, title) => {
       id: id,
       title: title,
     })
-    console.log('response from edit hours in: ', res.data);
     // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }
@@ -186,7 +166,6 @@ export const updateStatus = (id, newStatus) => {
       id: id,
       status: newStatus,
     })
-    console.log('response from edit hours in: ', res.data);
     // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }

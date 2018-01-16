@@ -4,9 +4,7 @@ import DashboardNotes from './DashboardNotes'
 
 const Dashboard = () => {
   return (
-
     <div className="dash-body">
-
       <div className="dash-body-top">
         <DashboardWeather />
       </div>

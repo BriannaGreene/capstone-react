@@ -4,9 +4,7 @@ import TicketsCurrent from './TicketsCurrent'
 import TicketsComplete from './TicketsComplete'
 import TicketsAll from './TicketsAll'
 
-
 const Tasks = () => {
-
   return (
     <div className="task-body">
       <ul className="tasks-nav">

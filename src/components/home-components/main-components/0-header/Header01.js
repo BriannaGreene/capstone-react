@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-
 class Header01 extends Component {
-
   render() {
     return (
       <div id="header01">
@@ -11,9 +9,7 @@ class Header01 extends Component {
         <button id="logout-button"><a href="http://localhost:5000/api/logout">LOGOUT</a></button>
       </div>
     )
-
   }
-
 }
 
 function mapStateToProps({ auth }) {

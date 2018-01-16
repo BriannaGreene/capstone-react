@@ -1,7 +1,6 @@
 import React from 'react'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, LabelList } from 'recharts'
 
-
 const data = [
       {name: 'Thu- T', uv: -1000, pv: 2400, amt: 2400},
       {name: 'Fri- F', uv: -3000, pv: 1398, amt: 2210},
@@ -25,7 +24,6 @@ const renderCustomizedLabel = (props) => {
     </g>
   );
 };
-
 
 const WeatherChart = () => {
   return (

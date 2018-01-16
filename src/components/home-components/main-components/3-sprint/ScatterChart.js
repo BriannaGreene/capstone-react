@@ -1,7 +1,6 @@
 import React from 'react'
 import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 
-
 const data01 = [
   {x: 1, y: 20, z: 20},
   {x: 2, y: 30, z: 30},
@@ -19,7 +18,6 @@ const data02 = [
   {x: 16, y: 50, z: 50},
   {x: 18, y: 75, z: 75}
 ];
-
 
 const ScatterChartComp = () => {
   return (

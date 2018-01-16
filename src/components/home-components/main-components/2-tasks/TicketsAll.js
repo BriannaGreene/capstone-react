@@ -2,12 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Task from './Task'
 
-
 const TicketsAll = ( state ) => {
-
   let tickets = state.user_tickets
-  // let users = state.users
-  console.log(tickets);
   let ticketsAll = []
 
   if (tickets !== null) {
@@ -30,8 +26,6 @@ const TicketsAll = ( state ) => {
     )
   }
 
-
-
   return (
       <div>
         <div className="ticket-title-holder">
@@ -52,10 +46,7 @@ const TicketsAll = ( state ) => {
           { ticketsAll }
         </div>
       </div>
-
   )
-
-
 }
 
 function mapStateToProps({ user_tickets, users }) {

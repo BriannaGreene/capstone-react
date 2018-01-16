@@ -26,7 +26,6 @@ const TicketsComplete = ( state ) => {
     ))
   }
 
-
   return (
       <div>
         <div className="ticket-title-holder">
@@ -48,8 +47,6 @@ const TicketsComplete = ( state ) => {
         </div>
       </div>
   )
-
-
 }
 
 function mapStateToProps({ user_tickets, users }) {

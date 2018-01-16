@@ -5,8 +5,6 @@ import * as actions from '../actions'
 import Landing from './Landing'
 import Home from './Home'
 require('dotenv').config()
-// const API = process.env.REACT_APP_API
-
 
 class App extends Component {
 
@@ -19,10 +17,7 @@ class App extends Component {
     this.props.getWeather()
   }
 
-
-
   render() {
-    console.log('PROPS FROM APP JS RENDER', this.props);
     return (
       <div className="div">
         <BrowserRouter>
@@ -41,9 +36,5 @@ class App extends Component {
 function mapStateToProps({ auth, users, user_tickets, weather, messages, stickies }) {
   return { auth, users, user_tickets, weather, messages, stickies }
 }
-
-// const mapDispatchToProps = dispatch => ({
-//    actions: bindActionCreators(actions, dispatch)
-// })
 
 export default connect(mapStateToProps, actions)(App)

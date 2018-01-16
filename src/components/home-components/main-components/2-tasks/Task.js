@@ -47,12 +47,9 @@ const Task = ({
     )
   })
 
-
-
   const updateTitle = (e) => {
     e.preventDefault()
     let text = e.target.value
-    console.log(e.target.value);
     state.updateTitle(id, text)
   }
 
@@ -60,19 +57,16 @@ const Task = ({
     e.preventDefault()
     let number = e.target.value
     state.editHoursIn(id, number)
-    // window.location.href = '/tasks'
   }
 
   const updateHoursOut = (e) => {
     e.preventDefault()
     let number = e.target.value
     state.editHoursOut(id, number)
-    // window.location.href = '/tasks'
   }
 
   const updateAssignees = (e) => {
     e.preventDefault()
-
   }
 
   const updateStatus = (e) => {
@@ -83,8 +77,6 @@ const Task = ({
     state.updateStatus(id, newStatus)
     window.location.href = '/tasks'
   }
-
-
 
   return (
     <div className="ticket-container" >
@@ -113,4 +105,3 @@ function mapStateToProps({ user }) {
 }
 
 export default connect(mapStateToProps, actions)(Task)
-// export default Task

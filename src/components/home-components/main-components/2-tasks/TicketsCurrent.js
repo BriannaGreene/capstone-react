@@ -27,7 +27,6 @@ const TicketsCurrent = ( state ) => {
       hoursOut={item.hours_to_complete}
       priority={item.priority}
       state={state}
-
     />
   ))
 
@@ -47,7 +46,6 @@ const TicketsCurrent = ( state ) => {
       state={state}
     />
   ))
-  console.log('state from tickets current: ', state);
 
   const newTicket = (e) => {
     e.preventDefault()
@@ -55,12 +53,8 @@ const TicketsCurrent = ( state ) => {
     let title = ''
     let assignees = '{ "assignees": [11] }'
     state.newTask(team, title, assignees)
-    // state.newSticky(user_id)
     window.location.href = '/tasks'
-
   }
-
-
 
   return (
       <div>
@@ -78,11 +72,9 @@ const TicketsCurrent = ( state ) => {
             <span className="tickets-section-title">Status</span>
           </div>
         </div>
-
         <div className="ticket-block">
           { ticketsInProgress }
         </div>
-
         <div className="ticket-title-holder">
           <div className="ticket-title-one">
             <span className="tickets-section-title">To Do</span>
@@ -97,7 +89,6 @@ const TicketsCurrent = ( state ) => {
             <button id="new-ticket-button" onClick={newTicket}>NEW TICKET</button>
           </div>
         </div>
-
         <div className="ticket-block">
           { ticketsToDo }
         </div>

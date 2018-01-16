@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import * as actions from '../../../../actions'
 
 const DashboardWeather = ( state ) => {
-
-  console.log('THIS PROPS FROM DASH WEATHER: ', state.weather);
   let currentSummary = ''
   let currentTemp = ''
   let day1high = ''
@@ -59,10 +57,6 @@ const DashboardWeather = ( state ) => {
       if (state.weather.daily7Icon === possibleIcons[i]) { class7 = possibleIcons[i] }
     }
   }
-
-
-  console.log('CLASS ONE: ', class1);
-
 
   return (
     <div className="dash-body-split">
@@ -123,18 +117,13 @@ const DashboardWeather = ( state ) => {
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
-
   )
 }
-
 
 function mapStateToProps({ weather, auth, users }) {
   return { weather, auth, users }
 }
-
 
 export default connect(mapStateToProps)(DashboardWeather)

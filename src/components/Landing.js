@@ -1,15 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import * as actions from '../actions'
-let link = `${process.env.REACT_APP_API}/auth/google`
 
 class Landing extends Component {
-
-  // componentDidMount() {
-  //   this.state.getTickets()
-  //   this.state.getStickies()
-  //   this.state.getMessages()
-  // }
 
   render() {
     return (
@@ -28,18 +19,6 @@ class Landing extends Component {
       </div>
     )
   }
-
 }
 
-
-function mapStateToProps({ }) {
-  return {  }
-}
-
-// const mapDispatchToProps = dispatch => ({
-//    actions: bindActionCreators(actions, dispatch)
-// })
-
-export default connect(mapStateToProps, actions)(Landing)
-// export default Home
-// export default Landing
+export default Landing

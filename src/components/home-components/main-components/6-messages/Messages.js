@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../../actions'
 import Message from './Message'
@@ -29,7 +29,6 @@ const Messages = ( state ) => {
     var frm = document.getElementsByName('message-form')[0]
     frm.reset()
     return false
-
   }
 
   let eachMessage = []
@@ -38,7 +37,7 @@ const Messages = ( state ) => {
       let name = ""
       let avatar = 0
       for (var i = 0; i < state.users.length; i++) {
-        if (message.user_id == state.users[i].id) {
+        if (message.user_id === state.users[i].id) {
           name = `${state.users[i].first_name} ${state.users[i].last_name}`
           avatar = state.users[i].avatar
         }
@@ -57,20 +56,16 @@ const Messages = ( state ) => {
     })
   }
 
-
   return (
     <div id="message-body">
       <div id="message-board">
         {eachMessage}
       </div>
-
       <div className="">
         <form  name="message-form" autoComplete="off" onSubmit={postMessage}>
             <input id="message-form" name="message" placeholder="Write a messsage!"/>
-            {/* <button className="">POST!</button> */}
         </form>
       </div>
-
     </div>
   )
 }

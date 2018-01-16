@@ -22,7 +22,6 @@ const data = [
   {name: 'Tyler', 'tasks to do': 55, 'in progress': 15, amt: 70},
 ];
 
-
 const StackedBarChart = () => {
   return (
     <div className="stackedbarchart-container">
