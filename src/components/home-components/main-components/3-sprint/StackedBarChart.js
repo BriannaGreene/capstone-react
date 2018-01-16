@@ -26,7 +26,7 @@ const data = [
 const StackedBarChart = () => {
   return (
     <div className="stackedbarchart-container">
-      <BarChart width={1100} height={250} data={data}
+      <BarChart width={1000} height={250} data={data}
             margin={{top: 20, right: 20, left: 10, bottom: 5}}>
         <XAxis dataKey="name"/>
         <YAxis/>
