@@ -14,6 +14,15 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 .darkblue { background-color: #0c3758; }
 .purple { background-color: purple; }
 .pink { background-color: #FD82CD; }
+.sticky-red { background-color: #ff4f75; }
+.sticky-orange { background-color: #ff9e36; }
+.sticky-yellow { background-color: #ffd94f; }
+.sticky-greene { background-color: #aee35d; }
+.sticky-aqua { background-color: #3cd6b7; }
+.sticky-blue { background-color: #61b3ff; }
+.sticky-midblue { background-color: #1586d6; }
+.sticky-purple { background-color: #ab2eab; }
+.sticky-pink { background-color: #FD82CD; }
 #avatar01 { background-image: url('./images/avatar01.png'); background-size: cover; background-position: center; }
 #avatar02 { background-image: url('./images/avatar02.png'); background-size: cover; background-position: center; }
 #avatar03 { background-image: url('./images/avatar03.png'); background-size: cover; background-position: center; }

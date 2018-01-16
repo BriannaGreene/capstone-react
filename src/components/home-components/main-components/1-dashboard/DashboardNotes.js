@@ -71,8 +71,6 @@ class DashboardNotes extends Component {
       key: 0,
       eachSticky: [],
       notes: [],
-      colors: ["red", "orange", "yellow", "greene", "aqua", "blue", "midblue", "pink"],
-      colorClass: "red"
     }
   }
 
@@ -90,8 +88,8 @@ class DashboardNotes extends Component {
   }
 
   getRandomColor() {
-    let colors = ["red", "orange", "yellow", "greene", "aqua", "midblue", "pink"]
-    let randomColor = colors[Math.floor(Math.random() * 7)]
+    let colors = ["sticky-red", "sticky-orange", "sticky-yellow", "sticky-greene", "sticky-aqua", "sticky-blue", "sticky-midblue", "sticky-purple", "sticky-pink"]
+    let randomColor = colors[Math.floor(Math.random() * 9)]
     return randomColor
   }
 
