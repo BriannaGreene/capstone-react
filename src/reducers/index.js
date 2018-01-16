@@ -7,7 +7,11 @@ import getWeather from './getWeather'
 import getMessages from './getMessages'
 import composeMessage from './composeMessage'
 import getStickies from './getStickies'
-import editHours from './editHours'
+import editHoursIn from './editHoursIn'
+import editHoursOut from './editHoursOut'
+import newTask from './newTask'
+import updateTitle from './updateTitle'
+import updateStatus from './updateStatus'
 
 export default combineReducers({
   auth: authReducer,
@@ -18,5 +22,9 @@ export default combineReducers({
   messages: getMessages,
   compose: composeMessage,
   stickies: getStickies,
-  hours: editHours
+  editHoursIn: editHoursIn,
+  editHoursOut: editHoursOut,
+  newTask: newTask,
+  updateTitle: updateTitle,
+  updateStatus: updateStatus
 })

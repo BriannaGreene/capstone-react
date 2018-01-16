@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Task from './Task'
-
+import * as actions from '../../../../actions'
 
 const TicketsCurrent = ( state ) => {
   let tickets = state.user_tickets
@@ -47,8 +47,18 @@ const TicketsCurrent = ( state ) => {
       state={state}
     />
   ))
+  console.log('state from tickets current: ', state);
 
+  const newTicket = (e) => {
+    e.preventDefault()
+    let team = 'g62'
+    let title = ''
+    let assignees = '{ "assignees": [11] }'
+    state.newTask(team, title, assignees)
+    // state.newSticky(user_id)
+    window.location.href = '/tasks'
 
+  }
 
 
 
@@ -78,13 +88,13 @@ const TicketsCurrent = ( state ) => {
             <span className="tickets-section-title">To Do</span>
           </div>
           <div className="ticket-title-four">
-            <span className="tickets-section-title">Hours</span>
+            <span className="tickets-section-title"></span>
           </div>
           <div className="ticket-title-two">
-            <span className="tickets-section-title">Assignees</span>
+            <span className="tickets-section-title"></span>
           </div>
           <div className="ticket-title-three">
-            <span className="tickets-section-title">Status</span>
+            <button id="new-ticket-button" onClick={newTicket}>NEW TICKET</button>
           </div>
         </div>
 
@@ -99,4 +109,4 @@ function mapStateToProps({ user_tickets, users }) {
   return { user_tickets, users }
 }
 
-export default connect(mapStateToProps)(TicketsCurrent)
+export default connect(mapStateToProps, actions)(TicketsCurrent)

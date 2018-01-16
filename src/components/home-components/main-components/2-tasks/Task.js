@@ -17,7 +17,6 @@ const Task = ({
   priority,
   state,
 }) => {
-  console.log('STATE FROM TASK: ', state);
 
   let statusColor = 'grey'
   if (status === 'in progress') { statusColor = '#83ba33' }
@@ -48,18 +47,27 @@ const Task = ({
     )
   })
 
+
+
+  const updateTitle = (e) => {
+    e.preventDefault()
+    let text = e.target.value
+    console.log(e.target.value);
+    state.updateTitle(id, text)
+  }
+
   const updateHoursIn = (e) => {
     e.preventDefault()
-    console.log(e);
-    console.log(e.target.value);
-    let id = id
     let number = e.target.value
-    let type = 'hours_complete'
-    state.editHours(id, number, type)
+    state.editHoursIn(id, number)
+    // window.location.href = '/tasks'
   }
 
   const updateHoursOut = (e) => {
     e.preventDefault()
+    let number = e.target.value
+    state.editHoursOut(id, number)
+    // window.location.href = '/tasks'
   }
 
   const updateAssignees = (e) => {
@@ -67,22 +75,33 @@ const Task = ({
 
   }
 
+  const updateStatus = (e) => {
+    e.preventDefault()
+    let newStatus = 'done'
+    if (statusColor === '#ee355d') { newStatus = 'in progress'}
+    if (statusColor === '#83ba33') { newStatus = 'done'}
+    state.updateStatus(id, newStatus)
+    window.location.href = '/tasks'
+  }
+
+
+
   return (
-    <div className="ticket-container" draggable="true">
+    <div className="ticket-container" >
       <div className="ticket-title-container">
         <div className="labels-container">
           {renderLabels}
         </div>
-        <span className="ticket-title">{title}</span>
+        <textarea className="ticket-title" rows="1" onChange={updateTitle} defaultValue={title}></textarea>
       </div>
       <div className="ticket-hours-container">
-        <textarea className="ticket-hours" resize="none" name="text" rows="1" cols="1" onChange={updateHoursIn}>{hoursIn}</textarea> /  <textarea className="ticket-hours" name="text" rows="1" cols="1">{hoursOut}</textarea>
+        <textarea className="ticket-hours" resize="none" name="text" rows="1" cols="1" onChange={updateHoursIn} defaultValue={hoursIn}></textarea> /  <textarea className="ticket-hours" name="text" rows="1" cols="1" onChange={updateHoursOut} defaultValue={hoursOut}></textarea>
       </div>
       <div className="ticket-assignees-container" onClick={updateAssignees}>
         {renderAssignees}
       </div>
       <div className="ticket-status-container">
-        <div className="status" style={{'backgroundColor': statusColor}}>
+        <div className="status" style={{'backgroundColor': statusColor}} onClick={updateStatus}>
         </div>
       </div>
     </div>

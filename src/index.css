@@ -150,9 +150,8 @@ body { position:absolute; top:0; bottom:0; right:0; left:0; margin:0; padding:0;
 #main-content { width: 90%; }
 #header-container { width: 96%; }
 #header01 { display: flex; justify-content: space-between; }
-.main-header { height: 50px; padding: 20px 0 20px 40px; background-color: #ededed; display: flex; align-items: center; }
-.main-heading { margin: 0 0 5px 0; font-size: 25px; color: #464646; }
-.main-sub-heading { font-weight: bold; font-size: 13px; color: #464646;  }
+.main-header { height: 50px; padding: 20px 0 20px 40px; background-color: #D4F0E9; display: flex; align-items: center; }
+.main-heading { margin: 0 0 5px 0; font-size: 25px; color: #83ba33; }
 
 .main-body {
   height: 82vh;
@@ -314,11 +313,11 @@ overflow-y: scroll;
 }
 
 .sticky {
-  border: solid 1px grey;
+  /* border: solid 1px grey; */
   margin: 10px;
   padding: 10px;
   background-color: pink;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   width: 190px;
   height: 150px;
@@ -366,8 +365,7 @@ overflow-y: scroll;
 .tasks-nav-li {
   margin: 0 10px 5px 10px;
   font-weight: bold;
-  text-decoration: none;
-  color: #004dff;
+  color: #17a98d;
   font-size: 18px;
 }
 
@@ -389,10 +387,13 @@ overflow-y: scroll;
   /* padding: 10px; */
 }
 
-/* .ticket-title {
+.ticket-title {
   margin: 5px;
   font-size: 15px;
-} */
+  width: 100%;
+  border: none;
+  resize: none;
+}
 
 .ticket-hours-container {
   width: 10%;
@@ -453,6 +454,15 @@ overflow-y: scroll;
 
 .ticket-title-four {
   width: 10%;
+}
+
+#new-ticket-button {
+  width: 100px;
+  height: 20px;
+  background-color: #83ba33;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 .ticket-assignees-container {

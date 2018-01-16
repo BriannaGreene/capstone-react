@@ -11,7 +11,11 @@ import {
   NEW_STICKY,
   EDIT_STICKY,
   DELETE_STICKY,
-  EDIT_HOURS
+  EDIT_HOURS_IN,
+  EDIT_HOURS_OUT,
+  NEW_TASK,
+  UPDATE_TITLE,
+  UPDATE_STATUS
 } from './types'
 
 export const fetchUser = () => {
@@ -130,14 +134,59 @@ export const deleteSticky = (id) => {
   }
 }
 
-export const editHours = (id, number, type) => {
-  console.log(id, number, type);
+export const editHoursIn = (id, number) => {
   return async dispatch => {
     const res = await axios.patch(`${process.env.REACT_APP_API}/tickets/${id}`, {
       id: id,
-      type: number,
+      hoursComplete: number,
     })
-    console.log('response from new sticky: ', res.data);
+    console.log('response from edit hours in: ', res.data);
+    dispatch({ type: EDIT_HOURS_IN, payload: res.data })
+  }
+}
+
+export const editHoursOut = (id, number) => {
+  return async dispatch => {
+    const res = await axios.patch(`${process.env.REACT_APP_API}/tickets/${id}`, {
+      id: id,
+      hoursToComplete: number,
+    })
+    console.log('response from edit hours in: ', res.data);
+    // dispatch({ type: EDIT_HOURS_IN, payload: res.data })
+  }
+}
+
+export const newTask = (team, title, assignees) => {
+  console.log('team in new task: ', team);
+  return async dispatch => {
+    const res = await axios.post(`${process.env.REACT_APP_API}/tickets`, {
+      team: team,
+      title: title,
+      assignees: assignees,
+      // prioity: 1
+    })
+    console.log('res from new task: ', res);
+  }
+}
+
+export const updateTitle = (id, title) => {
+  return async dispatch => {
+    const res = await axios.patch(`${process.env.REACT_APP_API}/tickets/${id}`, {
+      id: id,
+      title: title,
+    })
+    console.log('response from edit hours in: ', res.data);
+    // dispatch({ type: NEW_STICKY, payload: res.data })
+  }
+}
+
+export const updateStatus = (id, newStatus) => {
+  return async dispatch => {
+    const res = await axios.patch(`${process.env.REACT_APP_API}/tickets/${id}`, {
+      id: id,
+      status: newStatus,
+    })
+    console.log('response from edit hours in: ', res.data);
     // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }
