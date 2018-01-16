@@ -14,9 +14,11 @@ class App extends Component {
     this.props.fetchUser()
     this.props.getTickets()
     this.props.allUsers()
-    // this.props.getWeather()
+
     this.props.getMessages()
     this.props.getStickies()
+
+        // this.props.getWeather()
     // const currentUser = await fetch(`http://localhost:5000/api/current_user`)
     // const userData = await currentUser.json()
     // console.log('USER DATA FROM APP JS: ', userData);
