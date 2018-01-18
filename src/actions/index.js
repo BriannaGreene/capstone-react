@@ -108,7 +108,6 @@ export const editSticky = (id, message) => {
       id: id,
       note: message
     })
-    // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }
 
@@ -125,7 +124,6 @@ export const editHoursIn = (id, number) => {
       id: id,
       hoursComplete: number,
     })
-    dispatch({ type: EDIT_HOURS_IN, payload: res.data })
   }
 }
 
@@ -135,7 +133,6 @@ export const editHoursOut = (id, number) => {
       id: id,
       hoursToComplete: number,
     })
-    // dispatch({ type: EDIT_HOURS_IN, payload: res.data })
   }
 }
 
@@ -155,7 +152,6 @@ export const updateTitle = (id, title) => {
       id: id,
       title: title,
     })
-    // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }
 
@@ -165,6 +161,5 @@ export const updateStatus = (id, newStatus) => {
       id: id,
       status: newStatus,
     })
-    // dispatch({ type: NEW_STICKY, payload: res.data })
   }
 }
