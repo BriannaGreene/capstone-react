@@ -21,7 +21,6 @@ import {
 export const fetchUser = () => {
   return async dispatch => {
     const res = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    // const res = await axios.get('/api/current_user')
     dispatch({ type: FETCH_USER, payload: res.data[0] })
   }
 }
@@ -43,7 +42,6 @@ export const allUsers = () => {
 export const getTickets = () => {
   return async dispatch => {
     const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    // const response = await axios.get('/api/current_user')
     if (response.data[0] !== undefined) {
       let id = response.data[0].id
       const res = await axios.get(
@@ -83,7 +81,6 @@ export const composeMessage = (message, state) => {
 export const getStickies = () => {
   return async dispatch => {
     const response = await axios.get(`${process.env.REACT_APP_API}/api/current_user`)
-    // const response = await axios.get('/api/current_user')
     if (response.data[0] !== undefined) {
       let id = response.data[0].id
       const res = await axios.get(`${process.env.REACT_APP_API}/notes/${id}`)
@@ -108,6 +105,7 @@ export const editSticky = (id, message) => {
       id: id,
       note: message
     })
+    dispatch({ type: EDIT_STICKY, payload: res.data })
   }
 }
 
@@ -124,6 +122,7 @@ export const editHoursIn = (id, number) => {
       id: id,
       hoursComplete: number,
     })
+    dispatch({ type: EDIT_HOURS_IN, payload: res.data })
   }
 }
 
@@ -133,6 +132,7 @@ export const editHoursOut = (id, number) => {
       id: id,
       hoursToComplete: number,
     })
+    dispatch({ type: EDIT_HOURS_OUT, payload: res.data })
   }
 }
 
@@ -143,6 +143,7 @@ export const newTask = (team, title, assignees) => {
       title: title,
       assignees: assignees,
     })
+    dispatch({ type: NEW_TASK, payload: res.data })
   }
 }
 
@@ -152,6 +153,7 @@ export const updateTitle = (id, title) => {
       id: id,
       title: title,
     })
+    dispatch({ type: UPDATE_TITLE, payload: res.data })
   }
 }
 
@@ -161,5 +163,6 @@ export const updateStatus = (id, newStatus) => {
       id: id,
       status: newStatus,
     })
+    dispatch({ type: UPDATE_STATUS, payload: res.data })
   }
 }
